@@ -1,3 +1,3 @@
 # burger App
- START PROJECT
+ START PROJECT:
 npm run dev
