@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  
+  height: 100vh;
+  background-color: #f0b944;
+}
+
+#root {
+  margin: 10px auto;
+  padding: 20px 0;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  width: 80%;
+ height: 100%;
+ background-color: #ffffff;
+ border-radius: 40px;
+ border: 20px solid rgba(255,255,255,0.4);
+      background-clip: padding-box;
+
+}
+
+

@@ -1,0 +1,17 @@
+.burger-section{
+    margin-top: 20px;
+    background-color: aquamarine;
+    height: 60%;
+}
+
+.burgers-container {
+    background-color: red;
+    height: 80%;
+  
+   
+}
+.burgers-cards{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}

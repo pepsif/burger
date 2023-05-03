@@ -1,0 +1,9 @@
+.anonsment {
+    margin: 20px 0;
+}
+.anonsment-title {
+    font-weight: bolder;
+    letter-spacing: normal;
+    text-transform: capitalize;
+    text-align: left;
+}

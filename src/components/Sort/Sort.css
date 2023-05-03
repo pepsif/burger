@@ -1,0 +1,25 @@
+.sort-title {
+    font-weight:bold;
+    cursor: default;
+}
+select {
+  font-size: 12px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  appearance: none;
+  -o-appearance: none;
+  text-align: right;
+  width: 100px;
+  color: #aaaaaa;
+  font-weight: 500;
+  border: none;
+}
+select:hover {
+    cursor: pointer;
+}
+select:focus  {
+   outline: 0;
+}
+select::-ms-expand {
+    display: none;
+  }
