@@ -1,13 +1,10 @@
 .burger-section{
     margin-top: 20px;
-    background-color: aquamarine;
-    height: 60%;
+      
 }
 
 .burgers-container {
-    background-color: red;
-    height: 80%;
-  
+   padding: 10px 0;  
    
 }
 .burgers-cards{

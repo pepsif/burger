@@ -13,7 +13,7 @@ export default function BurgerContent() {
       <div className="container burgers-container">
         <div className="burgers-cards">
           {burgers.map((el, i) => {
-           return <Burger key={i}/>
+           return <Burger {...burgers[i]} key={i}/>
            
           })}
         </div>
