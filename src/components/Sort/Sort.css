@@ -9,10 +9,12 @@ select {
   appearance: none;
   -o-appearance: none;
   text-align: right;
-  width: 100px;
+  width: 60px;
   color: #aaaaaa;
+  background-color: inherit;
   font-weight: 500;
   border: none;
+
 }
 select:hover {
     cursor: pointer;

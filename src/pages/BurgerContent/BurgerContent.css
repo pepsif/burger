@@ -1,5 +1,5 @@
 .burger-section{
-    margin-top: 20px;
+    /* margin-top: 0px; */
       
 }
 
@@ -11,4 +11,10 @@
 display: flex;
 flex-wrap: wrap;
 justify-content: space-around;
+height: 400px;
+overflow:scroll;
 }
+.burgers-cards::-webkit-scrollbar {
+    visibility: hidden;
+    width: 0;
+    }
