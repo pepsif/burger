@@ -1,8 +1,8 @@
-import "./BurgerContent.css";
+import "./BurgersContent.css";
 import { useSelector, useDispatch } from "react-redux";
 import Burger from "../../components/BurgerCard/Burger";
 
-export default function BurgerContent() {
+export default function BurgersContent() {
   const burgers = useSelector((state) => state.burgers.data);
   const dispatch = useDispatch();
 

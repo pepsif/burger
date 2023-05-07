@@ -62,7 +62,7 @@ const initialState = {
       price: 95,
       rating: 4.2,
       composition: [ "Булочка","Салат","Сир","Соус Мехіко","Куряча Котлета","Салат","Майонез","Булочка" ],
-      background: "#9bc6be",
+      background: "#dadada",
       imageUrl: "../src/assets/burger8.png"
     }
   ]

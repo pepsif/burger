@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: #f0b944;
+  /* background-color: #f0b944; */
 }
 
 #root {
@@ -10,7 +10,10 @@ body {
   width: 80%;
   background-color: #f4f4f4;
   border-radius: 40px;
-  border: 20px solid rgba(255, 255, 255, 0.4);
-  background-clip: padding-box;
+  /* border: 20px solid rgba(255, 255, 255, 0.4);
+  background-clip: padding-box; */
   text-shadow: 1px 1px 10px rgb(184, 173, 173);
+
+  /* background: url(./assets/cesar-couto-BRfHCl2MiZI-unsplash.jpg)no-repeat; */
+  background-size: cover;
 }

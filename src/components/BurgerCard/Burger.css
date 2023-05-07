@@ -34,10 +34,10 @@ position: relative;
     font-weight:bold;
 }
 .burger-image {
-    width: 120px;
-    height: 100px;
+    width: 50%;
+    height: 50%;
  position: absolute;
- left: 10%;
+ left: 20%;
  top: 16%;
 
 
@@ -45,7 +45,21 @@ position: relative;
 .burger-heart {
     width: 20px;
     position: absolute;
-    right: 6px;
-    top: 40%;
+    right: 8px;
+    top: 6px;
     cursor: pointer;
+}
+
+.burger-counter-block {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 6px;
+    bottom: 14px;
+    font-size: 12px;
+}
+.burger-count {
+    font-size: 14px;
+    margin: 0 4px;
+    font-weight: 600;
 }
