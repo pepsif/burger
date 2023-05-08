@@ -1,0 +1,43 @@
+.burger_container{
+   display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+/*height: 90vh;*/
+}
+.image_block {
+height: 100%;
+}
+.burger_image {
+    width: 100%;
+
+}
+
+.return_block {
+ display: flex;
+    justify-content: space-between;
+}
+.heart_image {
+    width: 20px;
+    height: 20px;
+}
+
+.burger_description_block {
+/*align-self: baseline;*/
+    border-bottom: 2px solid lightslategrey;
+}
+
+.quantity_block {
+display: flex;
+    justify-content: space-between;
+}
+.values_block {
+
+}
+.value {
+font-size: 26px;
+    margin: 0 26px;
+}
+
+.button_block {
+
+}

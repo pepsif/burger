@@ -10,34 +10,25 @@ import {Header} from "./components/Header/Header";
 import {Search} from "./components/Search/Search";
 import Sort from "./components/Sort/Sort";
 import BurgersContent from "./pages/BurgersContent/BurgersContent.jsx";
+import BurgerPage from "./pages/Burger/BurgerPage.jsx";
 
 function App() {
     return (
-        <>
-
-
-                <Header/>
-                <AnonsmentBar/>
-                <Search/>
-                <Sort/>
-                <BurgersContent/>
-
     <Router>
         <Routes>
-            <Route path="header" element={<Header/>}/>
-            <Route path="anonsment" element={<AnonsmentBar/>}/>
-            <Route path="search" element={<Search/>}/>
-            <Route path="sort" element={<Sort/>}/>
-            <Route path="burgers" element={<BurgersContent/>}/>
+             <Route path="/" element={
+                 <>
+                     <Header />
+                     <AnonsmentBar/>
+                     <Search/>
+                     <Sort/>
+                     <BurgersContent/>
+                 </>
+             }/>
+            <Route path="burger" element={ <BurgerPage/> }/>
 
         </Routes>
-
     </Router>
-
-
-
-
-        </>
     )
 }
 
