@@ -1,14 +1,12 @@
 import "./BurgersContent.css";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import Burger from "../../components/BurgerCard/Burger";
 
 export default function BurgersContent() {
   const burgers = useSelector((state) => state.burgers.data);
-  const dispatch = useDispatch();
 
-  console.log(burgers);
 
-  return (
+   return (
     <section className="burger-section">
       <div className="container burgers-container">
         <div className="burgers-cards">

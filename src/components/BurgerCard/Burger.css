@@ -4,6 +4,7 @@
     margin: 10px;
     border-radius: 20px;
   position: relative;
+    color:black;
 }
 .rating-block {
     display: flex;

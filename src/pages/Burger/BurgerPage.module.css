@@ -16,6 +16,9 @@ height: 100%;
  display: flex;
     justify-content: space-between;
 }
+.return_button {
+
+}
 .heart_image {
     width: 20px;
     height: 20px;
@@ -39,5 +42,26 @@ font-size: 26px;
 }
 
 .button_block {
+display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.button_block button {
+    width: 100%;
+    margin: 4px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.customize {
+border: 2px solid #d3d3d3 !important;
 
+}
+.add {
+    background-color: #f7bd44;
+}
+.add_button_cost {
+    font-weight: 400;
+    float: right;
 }

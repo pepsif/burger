@@ -14,6 +14,7 @@ import BurgerPage from "./pages/Burger/BurgerPage.jsx";
 
 function App() {
     return (
+
     <Router>
         <Routes>
              <Route path="/" element={
