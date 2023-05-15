@@ -11,7 +11,8 @@ const initialState = {
         composition: ["Булочка", "Салат", "Сир", "Соус Мехіко", "Куряча Котлета", "Салат", "Майонез", "Булочка"],
         description: "Мексиканський гамбургер - це 100% яловичина на вогні, маринований огірок, сирний соус та пікантний соус Сальса, підрум'яне булочка з кунжутом та хрусткі чіпси Начос!",
         background: "#aedada",
-        imageUrl: "../src/assets/burger1.png"
+        imageUrl: "../src/assets/burger1.png",
+        imageForBurgerPage: "/src/assets/burger1.png"
     },
         {
             id: 1,
@@ -20,8 +21,10 @@ const initialState = {
             price: 120,
             rating: 5.1,
             composition: ["Булочка", "Салат", "Сир", "Соус Тітоньки Меїр", "Мясна Котлета", "Салат", "Майонез", "Булочка"],
+            description: "Дві великі котлети з яловичини, булочка, два шматочки сиру “Чеддер”, помідор, цибуля, огірок маринований, салат, соус, приправа.",
             background: "#daaed6",
-            imageUrl: "../src/assets/burger2.png"
+            imageUrl: "/src/assets/burger2.png",
+            imageForBurgerPage: "/src/assets/burger2.png"
         },
         {
             id: 2,
@@ -30,8 +33,10 @@ const initialState = {
             calories: "Calories: 310",
             rating: 3.8,
             composition: ["Булочка", "Салат", "Сир", "Майонез", "Салат", "Булочка"],
+            description: "Бургер з цибульним соусом та сиром. Соковита свиняча котлетка з начинкою із сиру та солодкуватий соус із цибулі на соєвому соусі.",
             background: "#aebdda",
-            imageUrl: "../src/assets/burger3.png"
+            imageUrl: "/src/assets/burger3.png",
+            imageForBurgerPage: "/src/assets/burger3.png"
         },
         {
             id: 3,
@@ -40,8 +45,10 @@ const initialState = {
             calories: "Calories: 500",
             rating: 4.6,
             composition: ["Булочка", "Салат", "Сир", "Мясна Котлета", "Майонез", "Салат", "Булочка"],
+            description: "Пухка булка бріош з соковитою яловичою котлетою, ніжним сиром чедер та хрусткою панчетою з додаванням соусу барбекю та сирно-гірчичного соусу, подається з картопляними діпами, салатом коул-слоу та кетчупом",
             background: "#daaeae",
-            imageUrl: "../src/assets/burger4.png"
+            imageUrl: "../src/assets/burger4.png",
+            imageForBurgerPage: "/src/assets/burger4.png"
         },
         {
             id: 4,
@@ -50,8 +57,10 @@ const initialState = {
             calories: "Calories: 480",
             rating: 5.3,
             composition: ["Булочка", "Салат", "Сир", "Соус Мехіко", "Куряча Котлета", "Салат", "Майонез", "Булочка"],
+            description: "котлети з яловичини, сир крем, булочка пшенична з кунжутом, салат Айсберг, маринований огірок, цибуля ріпчаста, соус \"Ремулат\".",
             background: "#daaed6",
-            imageUrl: "../src/assets/burger5.png"
+            imageUrl: "../src/assets/burger5.png",
+            imageForBurgerPage: "/src/assets/burger5.png"
         },
         {
             id: 5,
@@ -60,8 +69,10 @@ const initialState = {
             calories: "Calories: 570",
             rating: 4.9,
             composition: ["Булочка", "Салат", "Сир", "Соус Мехіко", "Куряча Котлета", "Салат", "Майонез", "Булочка"],
+            description: "Булочка на вибір, рослинна котлета, смажене куряче яйце, сир Чеддер, салат Айсберг, копчений перець, червона цибуля, соус Айолі, соус Джемесон",
             background: "#aedada",
-            imageUrl: "../src/assets/burger6.png"
+            imageUrl: "../src/assets/burger6.png",
+            imageForBurgerPage: "/src/assets/burger6.png"
         },
         {
             id: 6,
@@ -70,8 +81,10 @@ const initialState = {
             calories: "Calories: 490",
             rating: 4.6,
             composition: ["Булочка", "Салат", "Сир", "Соус Мехіко", "Куряча Котлета", "Салат", "Майонез", "Булочка"],
+            description: "Булочка на вибір, рослинна котлета, огірки, салат Айсберг, помідори, сушена цибуля, соус медовий майонез, соус Цезар",
             background: "#f7bd44",
-            imageUrl: "../src/assets/burger7.png"
+            imageUrl: "../src/assets/burger7.png",
+            imageForBurgerPage: "/src/assets/burger7.png"
         },
         {
             id: 7,
@@ -80,8 +93,10 @@ const initialState = {
             calories: "Calories: 610",
             rating: 4.2,
             composition: ["Булочка", "Салат", "Сир", "Соус Мехіко", "Куряча Котлета", "Салат", "Майонез", "Булочка"],
+            description: "Булочка на вибір, рослинна котлета, салат Айсберг, огірки консервовані, червона цибуля, соус Айолі",
             background: "#dadada",
-            imageUrl: "../src/assets/burger8.png"
+            imageUrl: "../src/assets/burger8.png",
+            imageForBurgerPage: "/src/assets/burger8.png"
         }
     ]
 

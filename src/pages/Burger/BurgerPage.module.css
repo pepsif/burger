@@ -4,31 +4,50 @@
     justify-content: space-between;
 /*height: 90vh;*/
 }
-.image_block {
-height: 100%;
-}
-.burger_image {
-    width: 100%;
-
-}
-
 .return_block {
  display: flex;
     justify-content: space-between;
+    background-color: #111111;
+    padding: 20px;
 }
 .return_button {
 
 }
 .heart_image {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
 }
+.image_block {
+    height: 100%;
+    background-color: #111111;
 
+
+}
+.burger_image {
+    width: 100%;
+
+}
 .burger_description_block {
-/*align-self: baseline;*/
-    border-bottom: 2px solid lightslategrey;
-}
+    z-index: 1;
+    margin-top:-32px ;
+    padding: 10px;
 
+    border-radius:  12% 12% 15% 10% / 10% 10% 0% 0% ;
+    border-bottom: 2px solid lightslategrey;
+    background-color: #f4f4f4;
+}
+.burger_title {
+margin: 10px;
+}
+.burger_calories{
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px;
+}
+.burger_description {
+    margin: 10px;
+    font-size: 14px;
+}
 .quantity_block {
 display: flex;
     justify-content: space-between;

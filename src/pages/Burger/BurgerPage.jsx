@@ -3,8 +3,8 @@ import styles from './BurgerPage.module.css';
 import { useSelector } from "react-redux";
 import { IoIosArrowBack } from "react-icons/io";
 import heart from "../../assets/icons/PikPng.com_restart-icon-png_3823370.png";
-import heartOutline from "../../assets/icons/pngwing.com (72).png";
-import burger from "../../assets/burger6.png";
+import heartOutline from "../../assets/icons/pngegg.png";
+import burger from "../../assets/burger2.png";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import {Link} from "react-router-dom";
 
@@ -13,8 +13,12 @@ export default function BurgerPage() {
     const activeBurgerId = useSelector((state) => state.burgers.activeBurgerId);
 
     const style = {
-    cursor: "pointer"
+    cursor: "pointer",
+    color: "white"
     }
+
+
+    // console.log( burger,burgers[activeBurgerId].imageForBurgerPage)
     return (
         <div className={styles.burger_container + " " + "container"}>
             <div className={styles.return_block}>
@@ -26,13 +30,13 @@ export default function BurgerPage() {
             </div>
 
             <div className={styles.image_block}>
-                <img className={styles.burger_image} src={burger} alt="burger"></img>
+                <img className={styles.burger_image} src={burgers[activeBurgerId].imageForBurgerPage} alt="burger"/>
             </div>
 
             <div className={styles.burger_description_block}>
-              <h3>{burgers[activeBurgerId].title}</h3>
-                <p>{burgers[activeBurgerId].calories}</p>
-                <p>{burgers[activeBurgerId].description}</p>
+              <h3 className={styles.burger_title}>{burgers[activeBurgerId].title}</h3>
+                <p className={styles.burger_calories}>{burgers[activeBurgerId].calories}</p>
+                <p className={styles.burger_description}>{burgers[activeBurgerId].description}</p>
                 <p>Склад: {burgers[activeBurgerId].composition.join(',')}</p>
             </div>
 
