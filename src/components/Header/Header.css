@@ -10,3 +10,10 @@ header {
 .header-title {
     font-weight: 600;
 }
+.header-cart, .header-avatar {
+    cursor: pointer;
+    transition: .3s;
+}
+.header-cart:hover, .header-avatar:hover {
+    transform: scale(1.1);
+}

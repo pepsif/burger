@@ -3,9 +3,11 @@
     height: 180px;
     margin: 10px;
     border-radius: 20px;
-  position: relative;
-    color:black;
+    position: relative;
+    color: black;
+
 }
+
 .rating-block {
     display: flex;
     margin: 10px 10px;
@@ -23,6 +25,7 @@ height: 60px;
 margin-top: 60%;
 background-color: #fff;
 position: relative;
+
 }
 .burger-title-block {
     width:80%;
@@ -40,8 +43,10 @@ position: relative;
  position: absolute;
  left: 20%;
  top: 16%;
-
-
+transition: .5s;
+}
+.burger-image:hover {
+    transform: scale(1.05);
 }
 .burger-heart {
     width: 20px;
@@ -58,6 +63,7 @@ position: relative;
     right: 6px;
     bottom: 14px;
     font-size: 12px;
+
 }
 .burger-count {
     font-size: 14px;

@@ -12,7 +12,8 @@ export default function Burger({ id, title, rating, price, background, imageUrl 
     const activeBurgerId = useSelector(state => state.burgers.activeBurgerId)
 
     const style = {
-    backgroundColor: background,
+    background: background,
+
     star: {
       color: "#f7bd44",
       width: 16,
@@ -23,17 +24,24 @@ export default function Burger({ id, title, rating, price, background, imageUrl 
       backgroundColor: "#f3f3f3",
       padding: "2px",
       cursor: "pointer",
+
     },
     link: {
         textDecoration: "none"
     }
   };
-
+const burgerAdd = () => {
+    return(
+        alert(7)
+    )
+}
 
   return (
-      <Link to="burger" style={style.link} onClick={()=> dispatch(setActiveBurgerId(id))}>
+
     <div className="burger-card" style={style}>
+        <Link to="burger" style={style.link} onClick={()=> dispatch(setActiveBurgerId(id))}>
       <img className="burger-image" src={imageUrl} alt="burger"></img>
+        </Link>
       <div className="rating-block">
         <TiStar style={style.star} />
         <span>{rating}</span>
@@ -50,10 +58,10 @@ export default function Burger({ id, title, rating, price, background, imageUrl 
         <div className="burger-counter-block">
           <AiOutlineMinus style={style.buttons} />
           <span className="burger-count">0</span>
-          <AiOutlinePlus style={style.buttons} />
+          <AiOutlinePlus style={style.buttons} onClick={()=>burgerAdd()}/>
         </div>
       </div>
     </div>
-      </Link>
+
   );
 }

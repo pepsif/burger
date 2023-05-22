@@ -5,7 +5,6 @@ import Burger from "../../components/BurgerCard/Burger";
 export default function BurgersContent() {
   const burgers = useSelector((state) => state.burgers.data);
 
-
    return (
     <section className="burger-section">
       <div className="container burgers-container">

@@ -24,6 +24,7 @@ function App() {
                      <Search/>
                      <Sort/>
                      <BurgersContent/>
+
                  </>
              }/>
             <Route path="burger" element={ <BurgerPage/> }/>

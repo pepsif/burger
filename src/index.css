@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  /* background-color: #f0b944; */
+   background-color: #f0b944;
 }
 
 #root {
@@ -8,12 +8,16 @@ body {
   padding: 20px 0;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   width: 80%;
-  background-color: #f4f4f4;
+  background-color: #f5f5f5;
+
+
   border-radius: 40px;
   /* border: 20px solid rgba(255, 255, 255, 0.4);
   background-clip: padding-box; */
   text-shadow: 1px 1px 10px rgb(184, 173, 173);
 
-  /* background: url(./assets/cesar-couto-BRfHCl2MiZI-unsplash.jpg)no-repeat; */
+   /*background: url(./assets/images/v1044-09a.jpg)no-repeat;*/
   background-size: cover;
+
+  position: relative;
 }
