@@ -18,8 +18,7 @@ export default function BurgerPage() {
         background: burgers[activeBurgerId].background,
         display: "flex",
         justifyContent: "space-between",
-    /*background-color: #111111;*/
-    padding: "20px",
+        padding: "20px",
     },
     image_block: {
         height: "100%",
@@ -53,7 +52,7 @@ export default function BurgerPage() {
             </div>
 
             <div style={style.image_block}>
-                <img className={styles.burger_image} src={burgers[activeBurgerId].imageForBurgerPage} alt="burger"/>
+                <img className={styles.burger_image} src={burgers[activeBurgerId].imageUrl} alt="burger"/>
             </div>
 
             <div className={styles.burger_description_block}>
