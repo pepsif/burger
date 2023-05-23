@@ -41,7 +41,6 @@ export default function BurgerPage() {
         }
     }
 
-
     // console.log( burger,burgers[activeBurgerId].imageForBurgerPage)
     return (
         <div className={styles.burger_container + " " + "container"}>
