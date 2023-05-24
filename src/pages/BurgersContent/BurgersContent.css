@@ -1,20 +1,20 @@
 .burger-section{
     /* margin-top: 0px; */
-      
+     height: 100%;
 }
 
 .burgers-container {
    padding: 10px 0;  
-   
+   height: 78%;
 }
 .burgers-cards{
 display: flex;
 flex-wrap: wrap;
 justify-content: space-around;
-height: 410px;
+height: 80%;
 overflow:scroll;
 }
 .burgers-cards::-webkit-scrollbar {
-    visibility: hidden;
-    width: 0;
+    /* visibility: hidden;
+    width: 0; */
     }

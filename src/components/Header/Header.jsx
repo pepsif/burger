@@ -2,7 +2,11 @@ import "./Header.css";
 import { FiMenu } from "react-icons/fi";
 import { VscAccount } from "react-icons/vsc";
 import { BsCart4 } from "react-icons/bs";
+
+
 export const Header = () => {
+
+  
   return (
     <header>
       <div className="container d-flex justify-between align-center p-10">

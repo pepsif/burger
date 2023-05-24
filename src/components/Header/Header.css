@@ -1,5 +1,6 @@
 header {
     margin-top: 10px;
+   
 }
 .header-container {
     display: flex;
@@ -11,6 +12,7 @@ header {
     font-weight: 600;
 }
 .header-cart, .header-avatar {
+   
     cursor: pointer;
     transition: .3s;
 }

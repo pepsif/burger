@@ -1,0 +1,14 @@
+@media (max-width: 420px) {
+    #root {
+        width: 90% !important;
+       
+    }
+    .burgers-cards {
+        justify-content: center !important;
+    }
+
+    .burger-card {
+        width: 140px !important;
+        margin: 4px !important;
+    }
+}
