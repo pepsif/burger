@@ -6,7 +6,7 @@ export const Search = () => {
     <section className="search">
       <div className="container d-flex justify-between">
         <input className="input" placeholder="Search"></input>
-        <button className="button d-flex justify-center align-center"><FaSearch/></button>
+        <button className="button search-buton d-flex justify-center align-center"><FaSearch/></button>
       </div>
     </section>
   );

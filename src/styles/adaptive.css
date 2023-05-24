@@ -11,4 +11,11 @@
         width: 140px !important;
         margin: 4px !important;
     }
+    .input {
+        margin-left: 10px;
+        width: 200px !important;
+    }
+    .search-buton {
+        margin-right: 20px;
+    }
 }

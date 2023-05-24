@@ -7,15 +7,23 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: inherit;
+   
+}
+.fit-menu {
+    width: 30px;
+    height: 30px;
 }
 .header-title {
     font-weight: 600;
 }
+.header-cart {
+ 
+}
 .header-cart, .header-avatar {
-   
+    transform: scale(1.3);
     cursor: pointer;
     transition: .3s;
 }
 .header-cart:hover, .header-avatar:hover {
-    transform: scale(1.1);
+    transform: scale(1.6);
 }
