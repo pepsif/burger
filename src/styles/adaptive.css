@@ -1,3 +1,4 @@
+
 @media (max-width: 420px) {
     #root {
         width: 90% !important;
@@ -19,3 +20,26 @@
         margin-right: 20px;
     }
 }
+
+@media (max-width: 321px) {
+    #root {
+     height: 800px !important;  
+     
+    }
+    .fit-menu {
+        width: 24px !important;
+    }
+    .header-cart, .header-avatar {
+        transform: scale(1.1) !important;
+    }
+    .input {
+        width: 120px !important;
+    }
+    .burger-card {
+        width: 120px !important;
+    }
+    .description-block {
+        margin-top: 72% !important;
+    }
+}
+

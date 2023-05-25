@@ -2,29 +2,25 @@
     margin: 10px 0;
 }
 .anonsment-container {
-  justify-content: center;
-    overflow: hidden;
-    width: 80%;
+  width: 80%;
+  overflow: hidden;
+   
 }
 
-.scroll-text {
-    
-  margin: 0;
-    /* font-weight: bolder;
-    letter-spacing: normal;
-    text-transform: capitalize; */
-     
-    animation-name: rightToLeft;
-  animation-duration: 20s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+.anonsment-text {
+  text-align:center;
+ margin: 0;
+   animation: text 25s infinite linear;
+   
+  padding-left: 100%;
+  white-space: nowrap;
 }
-
-@keyframes rightToLeft {
-    0% {
-      transform: translateX(200px);
-    }
-    100% {
-      transform: translateX(-160px);
-    }
+@keyframes text {
+  0%{
+    transform: translate(20, 0);
   }
+  
+  100%{
+    transform: translate(-160%, 0);
+  }
+}
