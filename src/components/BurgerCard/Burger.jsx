@@ -6,13 +6,11 @@ import heart from "../../assets/icons/PikPng.com_restart-icon-png_3823370.png";
 import heartOutline from "../../assets/icons/pngwing.com (72).png";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import {Link, Route} from "react-router-dom";
-
 export default function Burger({ id, title, rating, price, background, imageUrl }) {
     const dispatch = useDispatch();
     const activeBurgerId = useSelector(state => state.burgers.activeBurgerId)
 
-    console.log(imageUrl)
-    const style = {
+        const style = {
     background: background,
 
     star: {

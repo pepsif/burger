@@ -9,7 +9,7 @@ export const Header = () => {
   
   return (
     <header>
-      <div className="container d-flex justify-between align-center p-10">
+      <div className="container d-flex justify-between align-center p-20">
         <FiMenu className="fit-menu ml-10"/>
         <span className="header-title">Home</span>
           <div className="user-card-block d-flex align-center mr-10">
