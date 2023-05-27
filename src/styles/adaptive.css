@@ -47,13 +47,14 @@
     }
 
     .anonsment {
-        margin: 0 !important;
+      
     }
     .search-container {
-        padding: 0 !important;
+        
     }
     .input {
-        width: 120px !important;
+        width: 160px !important;
+        padding: 2px 20px !important;
     }
     .burger-card {
         width: 112px !important;

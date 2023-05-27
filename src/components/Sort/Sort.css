@@ -1,6 +1,9 @@
 .sort-section {
 
 }
+.sort-container {
+  padding: 0 20px;
+}
 .sort-title {
     font-weight:bold;
     cursor: default;

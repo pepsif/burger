@@ -19,6 +19,7 @@ export default function BurgerPage() {
         display: "flex",
         justifyContent: "space-between",
         padding: "20px",
+        borderRadius: "10% 10% 0% 0% / 49% 49% 10% 10%"
     },
     image_block: {
         height: "100%",
