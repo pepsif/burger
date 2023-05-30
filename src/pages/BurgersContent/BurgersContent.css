@@ -1,16 +1,19 @@
 .burger-section{
-    /* margin-top: 0px; */
-     height: 100%;
+     margin: 0;
+     height: 320px;
+     overflow-y: scroll;
+
+
 }
 
 .burgers-container {
    padding: 10px 0;  
-   height: 78%;
+ 
 }
 .burgers-cards{
 display: flex;
 flex-wrap: wrap;
-justify-content: space-around;
+justify-content: center;
 height: 80%;
 overflow:scroll;
 }

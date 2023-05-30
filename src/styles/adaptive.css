@@ -1,44 +1,37 @@
 
-@media (max-width: 769px) {
-   .burgers-cards {
-       justify-content: center !important;
-   }
-    .burger-card {
-        width: 160px !important;
-        margin: 4px !important;
-    }
-}
+/*@media (max-width: 769px) {*/
+/*   .burgers-cards {*/
+/*       justify-content: center !important;*/
+/*   }*/
+/*    .burger-card {*/
+/*        width: 160px !important;*/
+/*        margin: 4px !important;*/
+/*    }*/
+/*}*/
 
-@media (max-width: 426px) {
-   
-    .burgers-cards {
-        justify-content: center !important;
-    }
+/*@media (max-width: 426px) {*/
 
-    .burger-card {
-        width: 140px !important;
-        margin: 4px !important;
-    }
-    .input {
-        margin-left: 10px;
-        width: 200px !important;
-    }
-    .search-buton {
-        margin-right: 20px;
-    }
-}
+/*    .burgers-cards {*/
+/*        justify-content: center !important;*/
+/*    }*/
 
-@media (max-width: 371px) {
-    .burger-card {
-        width: 120px !important;
-    }
-    .description-block {
-        margin-top: 72% !important;
-    }
-}
+/*    .burger-card {*/
+/*        width: 140px !important;*/
+/*        margin: 4px !important;*/
+/*    }*/
+/*    .input {*/
+/*        margin-left: 10px;*/
+/*        width: 200px !important;*/
+/*    }*/
+/*    .search-buton {*/
+/*        margin-right: 20px;*/
+/*    }*/
+/*}*/
 
-@media (max-width: 321px) {
-   
+             /*-371-PX- 425 PX*/
+
+@media (min-width: 321px) and (max-width: 376px){
+
     .fit-menu {
         width: 24px !important;
     }
@@ -47,19 +40,26 @@
     }
 
     .anonsment {
-      
+
     }
     .search-container {
-        
+        padding: 0 10px;
     }
     .input {
-        width: 160px !important;
+        width: 60% !important;
         padding: 2px 20px !important;
     }
+    .burger-section {
+        margin: 0 !important;
+        height: 320px !important;
+    }
+    .burgers-cards {
+        justify-content: center !important;
+    }
     .burger-card {
-        width: 112px !important;
+        width: 120px !important;
         height: 140px !important;
-        /*margin-bottom: 10px !important;*/
+        margin: 10px 4px !important;
     }
     .burger-image {
         height: 40% !important;
@@ -72,4 +72,5 @@
         font-size: 12px !important;
     }
 }
+
 

@@ -14,12 +14,13 @@ export default function BurgerPage() {
 
     // console.log(burgers[activeBurgerId].background)
     const style = {
-    return_block: {
+         return_block: {
         background: burgers[activeBurgerId].background,
         display: "flex",
         justifyContent: "space-between",
         padding: "20px",
-        borderRadius: "10% 10% 0% 0% / 49% 49% 10% 10%"
+        borderRadius: "10% 10% 0% 0% / 49% 49% 10% 10%",
+        marginTop: "-20px"
     },
     image_block: {
         height: "100%",

@@ -1,7 +1,7 @@
 .burger-card {
-    width: 160px;
-    height: 180px;
-    margin: 10px;
+    width: 120px;
+    height: 140px;
+    margin: 10px 4px;
     border-radius: 20px;
     position: relative;
     color: black;
@@ -22,7 +22,7 @@
 }
 .description-block {
 height: 60px;    
-margin-top: 62%;
+margin-top: 42%;
 background-color: #fff;
 position: relative;
 
@@ -32,6 +32,7 @@ position: relative;
     font-size: 14px;
     font-weight: 600;
     padding: 6px;
+
 }
 .burger-price{
     font-size: 12px;
@@ -39,10 +40,10 @@ position: relative;
 }
 .burger-image {
     width: 50%;
-    height: 50%;
+    height: 40%;
  position: absolute;
  left: 20%;
- top: 16%;
+ top: 20%;
 transition: .5s;
 }
 .burger-image:hover {

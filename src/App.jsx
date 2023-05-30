@@ -11,7 +11,7 @@ import {Search} from "./components/Search/Search";
 import Sort from "./components/Sort/Sort";
 import BurgersContent from "./pages/BurgersContent/BurgersContent.jsx";
 import BurgerPage from "./pages/Burger/BurgerPage.jsx";
-import CustomBurger from "./components/CustomBurger/CustomBurger";
+import CustomBurgerPopup from "./components/CustomBurger/CustomBurgerPopup.jsx";
 
 function App() {
     return (
@@ -25,7 +25,7 @@ function App() {
                      <Search/>
                      <Sort/>
                      <BurgersContent/>
-                     <CustomBurger/>
+                     <CustomBurgerPopup/>
                  </>
              }/>
             <Route path="burger" element={ <BurgerPage/> }/>

@@ -2,15 +2,16 @@
    margin: 10px 0;
 }
 .search-container {
-    
+    padding: 0 10px;
 }
 .input {
     border-radius: 20px;
     border: 2px solid #dadada;
-    width: 270px;
+    width: 60%;
     max-height:30px;
-    padding: 10px 20px;
+    padding: 2px 20px;
     color:#aaaaaa;
+
 }
 .input::placeholder {
     color: #aaaaaa;
