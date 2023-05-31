@@ -1,36 +1,14 @@
-.burger_container{
-   display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-/*height: 90vh;*/
-
+.burger_container {
+ /* margin-top: 20px; */
 }
-.return_block {
 
-}
-.return_button {
-
-}
-.heart_image {
-    width: 16px;
-    height: 16px;
-}
-.image_block {
-
-
-
-}
-.burger_image {
-    width: 100%;
-
-}
 .burger_description_block {
     z-index: 1;
     margin-top:-32px ;
     padding: 10px;
 
     border-radius:  12% 12% 15% 10% / 10% 10% 0% 0% ;
-    border-bottom: 2px solid lightslategrey;
+    border-bottom: 2px solid rgb(229, 229, 229);
     background-color: #f4f4f4;
 }
 .burger_title {
@@ -47,26 +25,6 @@ margin: 10px;
 }
 
 
-.quantity_block {
-    margin: 20px 0;
-display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.values_block {
-display: flex;
-    align-items: center;
-}
-.quantity {
-    font-weight: bold;
-}
-.value {
-font-size: 26px;
-
-    margin: 0 26px;
-}
-
-
 .button_block {
     margin: 10px 0;
 display: flex;
@@ -74,7 +32,7 @@ display: flex;
     align-items: center;
 }
 .button_block button {
-    width: 100%;
+    width: 86%;
     margin: 6px 0;
     padding: 10px;
     border: none;

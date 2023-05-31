@@ -1,0 +1,19 @@
+.quantity_block {
+    margin: 20px 0 40px 0;
+    padding: 0 20px 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.values_block {
+    display: flex;
+    align-items: center;
+}
+.quantity {
+    font-weight: bold;
+}
+.value {
+    font-size: 26px;
+
+    margin: 0 26px;
+}
