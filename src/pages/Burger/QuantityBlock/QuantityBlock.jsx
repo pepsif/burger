@@ -10,7 +10,7 @@ export default function QuantityBlock(){
     const style = {
         image_block: {
             height: "100%",
-            background: burgers[activeBurgerId].background,
+            // background: burgers[activeBurgerId].background,
         },
         cursor: "pointer",
         color: "white",

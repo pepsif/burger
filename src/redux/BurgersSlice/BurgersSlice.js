@@ -8,7 +8,6 @@ import burger6Page from '../../assets/burger6.png';
 import burger7Page from '../../assets/burger7.png';
 import burger8Page from '../../assets/burger8.png';
 
-// imageUrl: "../src/assets/burger1.png"
 
 const initialState = {
     activeBurgerId: 0,

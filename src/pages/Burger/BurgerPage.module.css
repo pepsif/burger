@@ -1,5 +1,8 @@
 .burger_container {
- /* margin-top: 20px; */
+ background-color: white;
+ padding-bottom: 40px;
+ border-radius: 30px;
+ z-index: 1;
 }
 
 .burger_description_block {
@@ -9,7 +12,7 @@
 
     border-radius:  12% 12% 15% 10% / 10% 10% 0% 0% ;
     border-bottom: 2px solid rgb(229, 229, 229);
-    background-color: #f4f4f4;
+    background-color: inherit;
 }
 .burger_title {
 margin: 10px;
@@ -26,7 +29,8 @@ margin: 10px;
 
 
 .button_block {
-    margin: 10px 0;
+    margin-top: 20px;
+   
 display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,6 +45,7 @@ display: flex;
 }
 .customize {
 border: 2px solid #d3d3d3 !important;
+background-color: inherit;
 
 }
 .add {
