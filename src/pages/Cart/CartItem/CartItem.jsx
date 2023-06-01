@@ -11,15 +11,15 @@ export default function CartItem() {
     <div className="cart-item">
       <div className="product-image-block"><img className="product-img" src={burger}></img></div>
       <div className="price-block">
-        <p className="product-title">product title</p>
+        <p className="product-title">Мексиканський</p>
         <div className="quantity-block">
-          <RemoveIcon/>
+          <RemoveIcon className="quantity-button" fontSize="small"/>
           <span className="quantity-value">1</span>
-          <AddIcon/>
+          <AddIcon className="quantity-button" fontSize="small"/>
 
         </div>
       </div>
-      <span>item price</span>
+      <span className="total-value">₴ 10</span>
 
 
     </div>
