@@ -30,15 +30,26 @@
   margin: 20px 0px;
 
   .quantity-button {
-    width: 10px;
-    background-color: #f0b944;
+    width: 20px;
+    background: rgb(240,185,68);
+background: linear-gradient(90deg, rgba(240,185,68,1) 0%, rgb(237, 218, 8) 100%);
+border-radius: 4px;
   }
   .quantity-value {
     font-size: 20px;
   }
 }
-
+.price-product-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .total-value {
   font-size: 20px;
   font-weight: 500;
+}
+.delete-icon {
+  margin-bottom: 20px;
+  color:rgb(125, 125, 125);
+  cursor: pointer;
 }

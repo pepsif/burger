@@ -1,7 +1,8 @@
-import "./CartItem.css";
+import "./CartItem.scss";
 import burger from '../../../assets/burger1.png'
 import RemoveIcon from '@mui/icons-material/Remove';
 import AddIcon from '@mui/icons-material/Add';
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 
 export default function CartItem() {
    
@@ -19,7 +20,11 @@ export default function CartItem() {
 
         </div>
       </div>
-      <span className="total-value">₴ 10</span>
+      <div className="price-product-block">
+        <span className="total-value">₴ 10</span>
+        <DeleteOutlineIcon className="delete-icon"/>
+      </div>
+      
 
 
     </div>
