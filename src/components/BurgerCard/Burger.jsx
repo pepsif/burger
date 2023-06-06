@@ -1,12 +1,17 @@
 import "./Burger.css";
-import {  useSelector,useDispatch } from "react-redux";
-import { setActiveBurgerId} from "../../redux/BurgersSlice/BurgersSlice.js";
-import { TiStar } from "react-icons/ti";
 import heart from "../../assets/icons/PikPng.com_restart-icon-png_3823370.png";
 import heartOutline from "../../assets/icons/pngwing.com (72).png";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
+import { TiStar } from "react-icons/ti";
 import {Link, Route} from "react-router-dom";
-export default function Burger({ id, title, rating, price, background, imageUrl }) {
+
+import {  useSelector,useDispatch } from "react-redux";
+import { setActiveBurgerId, increaseBurgerValue, decreaseBurgerValue } from "../../redux/BurgersSlice/BurgersSlice.js";
+import { burgersCountIncrease, burgersCountDecrease } from "../../redux/CartSlice/CartSlice"
+
+
+
+export default function Burger({ id, value, title, rating, price, background, imageUrl }) {
     const dispatch = useDispatch();
     const activeBurgerId = useSelector(state => state.burgers.activeBurgerId)
 
@@ -29,12 +34,18 @@ export default function Burger({ id, title, rating, price, background, imageUrl 
         textDecoration: "none"
     }
   };
-const burgerAdd = () => {
-    return(
-        alert(7)
-    )
+const burgerAdd = (elem) => {
+  
+   
+       dispatch(burgersCountIncrease()),
+       dispatch(increaseBurgerValue(id))
+    console.log(value)
 }
-
+const burgerDecrease = () => {
+   if(value === 0) return
+    dispatch(burgersCountDecrease())
+    dispatch(decreaseBurgerValue(id))
+}
   return (
 
     <div className="burger-card" style={style}>
@@ -55,9 +66,9 @@ const burgerAdd = () => {
         </div>
 
         <div className="burger-counter-block">
-          <AiOutlineMinus style={style.buttons} />
-          <span className="burger-count">0</span>
-          <AiOutlinePlus style={style.buttons} onClick={()=>burgerAdd()}/>
+          <AiOutlineMinus style={style.buttons} onClick={()=>burgerDecrease()}/>
+          <span className="burger-count">{ value }</span>
+          <AiOutlinePlus style={style.buttons} onClick={(elem)=>burgerAdd(elem)}/>
         </div>
       </div>
     </div>

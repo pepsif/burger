@@ -41,9 +41,10 @@ export default function BurgerPage() {
       <QuantityBlock />
 
       <div className={styles.button_block}>
-        <button className={styles.customize}>Customize</button>
+        <button className={styles.customize}>Редагувати</button>
         <button className={styles.add}>
-          Add to Cart <span className={styles.add_button_cost}>₴00.00</span>
+          Додати до кошика
+          <span className={styles.add_button_cost}>₴00.00</span>
         </button>
       </div>
     </div>

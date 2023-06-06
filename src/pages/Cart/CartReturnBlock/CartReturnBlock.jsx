@@ -9,7 +9,7 @@ export default function CartReturnBlock() {
             <NavigateBeforeIcon className='return-icon'/>
         </Link>
            
-           <span className='cart-title'>Корзина</span>
+           <span className='cart-title'>Кошик</span>
         </div>
     )
 }

@@ -6,6 +6,7 @@
     position: relative;
     color: black;
 
+   
 }
 
 .rating-block {
@@ -23,7 +24,7 @@
 .description-block {
 height: 60px;    
 margin-top: 42%;
-background-color: #fff;
+background-color: #f7f7f7;
 position: relative;
 
 }

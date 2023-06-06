@@ -13,6 +13,7 @@ const initialState = {
     activeBurgerId: 0,
     data: [{
         id: 0,
+        value: 0,
         title: "Мексіканський",
         calories: "Calories: 450",
         price: 80,
@@ -21,9 +22,11 @@ const initialState = {
         description: "Мексиканський гамбургер - це 100% яловичина на вогні, маринований огірок, сирний соус та пікантний соус Сальса, підрум'яне булочка з кунжутом та хрусткі чіпси Начос!",
         background: "linear-gradient(90deg, rgba(175,218,216,1) 0%, rgba(71,220,160,.8) 100%)",
         imageUrl: burger1Page,
+
         },
         {
             id: 1,
+            value: 0,
             title: "Рояль Бургер",
             calories: "Calories: 390",
             price: 120,
@@ -36,6 +39,7 @@ const initialState = {
         },
         {
             id: 2,
+            value: 0,
             title: "Бургер із Сиром",
             price: 60,
             calories: "Calories: 310",
@@ -48,6 +52,7 @@ const initialState = {
         },
         {
             id: 3,
+            value: 0,
             title: "Біф Бургер",
             price: 90,
             calories: "Calories: 500",
@@ -59,6 +64,7 @@ const initialState = {
         },
         {
             id: 4,
+            value: 0,
             title: "Сімейний",
             price: 160,
             calories: "Calories: 480",
@@ -70,6 +76,7 @@ const initialState = {
         },
         {
             id: 5,
+            value: 0,
             title: "Байрактар",
             price: 180,
             calories: "Calories: 570",
@@ -81,6 +88,7 @@ const initialState = {
         },
         {
             id: 6,
+            value: 0,
             title: "ЄН Лав",
             price: 100,
             calories: "Calories: 490",
@@ -92,6 +100,7 @@ const initialState = {
         },
         {
             id: 7,
+            value: 0,
             title: "Полтавський",
             price: 95,
             calories: "Calories: 610",
@@ -110,11 +119,20 @@ export const burgersSlice = createSlice({
     initialState,
     reducers: {
         setActiveBurgerId: (state,action) => {
-            state.activeBurgerId = action.payload
+            state.activeBurgerId = action.payload;
 
-        }
+        },
+        increaseBurgerValue: (state,action) => {
+        //   console.log(  state.data[action.payload].value )
+          state.data[action.payload].value += 1;
+        },
+        decreaseBurgerValue: (state,action) => {
+            //   console.log(  state.data[action.payload].value )
+            if(state.data[action.payload].value === 0) return;
+              state.data[action.payload].value -= 1;
+            }
     }
 })
 
-export const { setActiveBurgerId } = burgersSlice.actions
+export const { setActiveBurgerId, increaseBurgerValue, decreaseBurgerValue } = burgersSlice.actions
 export default burgersSlice.reducer

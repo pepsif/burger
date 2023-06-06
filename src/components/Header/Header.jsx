@@ -1,11 +1,17 @@
-import "./Header.css";
+import "./Header.scss";
 import { FiMenu } from "react-icons/fi";
 import { VscAccount } from "react-icons/vsc";
 import { BsCart4 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
+import { useSelector,useDispatch } from "react-redux";
+
+
 export const Header = () => {
-  
+  const dispatch = useDispatch();
+  const burgersCount = useSelector(state=>state.cart.burgersCount);
+
+   
   return (
     <header>
       <div className="container header-container ">
@@ -13,7 +19,11 @@ export const Header = () => {
         <span className="header-title">Home</span>
           <div className="user-card-block d-flex align-center mr-20">
           <Link to="cart">
-             <BsCart4 className="header-cart mr-10"/>
+          <div className="cart-block">
+            <BsCart4 className="header-cart mr-10"/>
+             { (burgersCount) ? <span className="burgers-count">{ burgersCount }</span> : '' }
+          </div>
+             
           </Link>
              
               <VscAccount className="header-avatar"/>
