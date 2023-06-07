@@ -6,10 +6,10 @@ export default function Sort() {
            <div className="container sort-container d-flex justify-between">
             <span className="sort-title">Гамбургери</span>
             <select>
-            <option>SEE ALL</option>
-              <option>Low to High</option>
-              <option>High to Low</option>
-              <option>Ratings</option>
+            <option>Всі</option>
+              <option>по Ціні: від меньшої до більшої</option>
+              <option>по Ціні: від більшої до низької  </option>
+              <option>по Рейтингу</option>
             </select>
            </div>
         </section>

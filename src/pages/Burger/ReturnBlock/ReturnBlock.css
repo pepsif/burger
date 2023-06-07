@@ -1,4 +1,6 @@
-.return_block {
+.return-block {
+backdrop-filter: blur(20px) brightness(94%);
+border-radius: 30px 30px 10% 10% / 30px 30px 0% 0% ;
 
 }
 .return_button {

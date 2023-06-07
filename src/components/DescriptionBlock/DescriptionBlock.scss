@@ -1,0 +1,22 @@
+.burger_description_block {
+    z-index: 1;
+    margin-top:-32px ;
+    padding: 10px;
+
+    border-radius:  12% 12% 15% 10% / 10% 10% 0% 0% ;
+    border-bottom: 2px solid rgb(229, 229, 229);
+    background-color: inherit;
+}
+.burger_title {
+    margin: 10px;
+    }
+    
+.burger_calories{
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px;
+}
+.burger_description {
+    margin: 10px;
+    font-size: 14px;
+}

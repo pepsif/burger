@@ -35,11 +35,9 @@ export default function Burger({ id, value, title, rating, price, background, im
     }
   };
 const burgerAdd = (elem) => {
-  
-   
-       dispatch(burgersCountIncrease()),
+        dispatch(burgersCountIncrease())
        dispatch(increaseBurgerValue(id))
-    console.log(value)
+    
 }
 const burgerDecrease = () => {
    if(value === 0) return

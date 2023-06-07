@@ -1,0 +1,27 @@
+.button_block {
+    margin-top: 20px;
+   
+display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.button_block button {
+    width: 86%;
+    margin: 6px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.customize {
+border: 2px solid #d3d3d3 !important;
+background-color: inherit;
+
+}
+.add {
+    background-color: #f7bd44;
+}
+.add_button_cost {
+    font-weight: 400;
+    float: right;
+}
