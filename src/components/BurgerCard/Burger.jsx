@@ -1,4 +1,5 @@
 import "./Burger.css";
+import React from "react";
 import heart from "../../assets/icons/PikPng.com_restart-icon-png_3823370.png";
 import heartOutline from "../../assets/icons/pngwing.com (72).png";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
@@ -10,10 +11,9 @@ import { setActiveBurgerId, increaseBurgerValue, decreaseBurgerValue } from "../
 import { burgersCountIncrease, burgersCountDecrease } from "../../redux/CartSlice/CartSlice"
 
 
-
 export default function Burger({ id, value, title, rating, price, background, imageUrl }) {
     const dispatch = useDispatch();
-    const activeBurgerId = useSelector(state => state.burgers.activeBurgerId)
+    const activeBurgerId = useSelector(state => state.burgers.activeBurgerId);
 
         const style = {
     background: background,
@@ -48,7 +48,7 @@ const burgerDecrease = () => {
 
     <div className="burger-card" style={style}>
         <Link to="burger" style={style.link} onClick={()=> dispatch(setActiveBurgerId(id))}>
-      <img className="burger-image" src={imageUrl} alt="burger"></img>
+      <img className="burger-image" src= { imageUrl } alt="burger"></img>
         </Link>
       <div className="rating-block">
         <TiStar style={style.star} />
