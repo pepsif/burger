@@ -9,7 +9,6 @@ import BurgerPage from "./pages/Burger/BurgerPage.jsx";
 import CustomBurgerPopup from "./components/CustomBurger/CustomBurgerPopup.jsx";
 import Cart from "./pages/Cart/Cart";
 
-import Parse from 'parse/dist/parse.min.js';
 
 function App() {
 

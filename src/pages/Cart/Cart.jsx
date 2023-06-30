@@ -7,7 +7,6 @@ import CartTotalSumBlock from "./CartTotalSumBlock/CartTotalSumBlock";
 
 export default function Cart() {
  const burgers = useSelector(state => state.burgers.data)
-
  const result = burgers.filter(el => el.value > 0)
  
   useEffect(() => {

@@ -4,6 +4,10 @@
      overflow-y: scroll;
     border-bottom: 2px solid #e6e6e6;
 }
+.burger-section::-webkit-scrollbar {
+    width: 0;
+   
+  }
 
 .burgers-container {
    padding: 10px 0;  
@@ -16,6 +20,7 @@ justify-content: center;
 height: 80%;
 overflow:scroll;
 }
+
 .burgers-cards::-webkit-scrollbar {
     visibility: hidden; 
     width: 0;
