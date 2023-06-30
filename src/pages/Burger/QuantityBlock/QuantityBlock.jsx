@@ -2,10 +2,10 @@ import styles from "./QuantityBlock.module.css";
 import {AiOutlineMinus, AiOutlinePlus} from "react-icons/ai";
 import {useSelector} from "react-redux";
 
-
 export default function QuantityBlock(){
     const burgers = useSelector(state => state.burgers.data)
     const activeBurgerId = useSelector((state) => state.burgers.activeBurgerId);
+
 
     const style = {
         image_block: {
@@ -33,7 +33,7 @@ export default function QuantityBlock(){
             <span className={styles.quantity}>Кількість</span>
             <div className={styles.values_block}>
                 <AiOutlineMinus style={style.quantity.minus}/>
-                <span className={styles.value}>1</span>
+                <span className={styles.value}>{burgers[activeBurgerId].value}</span>
                 <AiOutlinePlus style={style.quantity.plus}/>
             </div>
 

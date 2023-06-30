@@ -1,7 +1,7 @@
-.customize-section {
+.delivery-section {
   /* background-color: #e0e0e0; */
 }
-.customize-burger-container {
+.delivery-burger-container {
   max-width: 260px;
   display: flex;
   flex-direction: column;

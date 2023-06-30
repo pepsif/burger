@@ -8,7 +8,7 @@ import BurgersContent from "./pages/BurgersContent/BurgersContent.jsx";
 import BurgerPage from "./pages/Burger/BurgerPage.jsx";
 import CustomBurgerPopup from "./components/CustomBurger/CustomBurgerPopup.jsx";
 import Cart from "./pages/Cart/Cart";
-
+import DeliveryPage from './pages/Delivery/DeliveryPage'
 
 function App() {
 
@@ -20,7 +20,6 @@ function App() {
         <Route path="/" element={
             <>
               <Header />
-
               <AnonsmentBar />
               <Search />
               <Sort />
@@ -31,6 +30,7 @@ function App() {
         />
         <Route path="burger" element={<BurgerPage />} />
         <Route path="cart" element={ <Cart/> }/>
+        <Route path="delivery" element={ <DeliveryPage/> }/>
       </Routes>
     </Router>
   );

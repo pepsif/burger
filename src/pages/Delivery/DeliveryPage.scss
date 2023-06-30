@@ -1,0 +1,36 @@
+.delivery-section {
+    // height: 90vh;
+
+    .delivery-container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     
+     
+        .title {
+        text-align: center;
+        margin: 10px 0;
+    } 
+
+    .delivery-return-block {
+        width: 90%;
+        margin: 10px 0;
+      display: flex;
+      justify-content: space-between;
+
+        .delivery-return-button{
+
+        }
+        .delivery-return-title{
+           font-size: 14px;
+        }
+    }
+
+  .box-form{
+    text-align: center;
+  }
+
+
+    }
+    
+}
