@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import CartReturnBlock from "./CartReturnBlock/CartReturnBlock";
 import CartItem from "./CartItem/CartItem";
 import CartTotalSumBlock from "./CartTotalSumBlock/CartTotalSumBlock";
+import Button from '@mui/material/Button';
 
 export default function Cart() {
  const burgers = useSelector(state => state.burgers.data)
@@ -37,6 +38,7 @@ export default function Cart() {
       </div>
 
       <CartTotalSumBlock />
+      <Button className="payment-button" variant="contained" >Оплатити</Button>
     </div>
   );
 }

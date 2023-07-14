@@ -22,8 +22,10 @@ body {
    border-radius: 40px;
    text-shadow: 1px 1px 10px rgb(184, 173, 173);
    position: relative;
-  /* height: 560px; */
-  /* background: url(../src/assets/images/razvody_tsarapiny_tekstura_182896_1920x1200.jpg) 0 0 no-repeat;
-  background-size: cover; */
-}
+  
+  background: url(../src/assets/images/White-PNG-HD.png) 0 0 no-repeat;
+  background-size: cover;
+  
+  background-color: rgb(245, 245, 245);
+  }
 

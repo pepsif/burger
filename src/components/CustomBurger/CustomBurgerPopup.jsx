@@ -12,8 +12,7 @@ export default function CustomBurgerPopup() {
     <div className="delivery-section">
     <Link to="delivery" alt="delivery button">
        <div className="delivery-burger-container">
-        <p>Замовити</p>
-
+       
         <div className="courier-block">
           <img className="courier-image" src={courier}></img>
           <LunchDiningOutlinedIcon className="custom-burger-image animate__animated animate__pulse animate__infinite" />
@@ -22,7 +21,7 @@ export default function CustomBurgerPopup() {
         </div>
 
         {/* <img className="custom-burger-image" src={burger2}></img> */}
-        <p>Доставку!!!</p>
+        <p className="delivery-button-slogan">Замовити Доставку!!!</p>
       </div>
     </Link>
      

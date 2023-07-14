@@ -42,3 +42,8 @@ font-size: 14px;
     align-self: center;
     margin-right: 4px;
 }
+.delivery-button-slogan{
+  margin: 2px;
+  font-size: 14px;
+  transform: translateY(-6px);
+}
