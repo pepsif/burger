@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import './CartReturnBlock.css';
+import './CartReturnBlock.scss';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 
 export default function CartReturnBlock() {

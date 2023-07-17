@@ -11,9 +11,6 @@ import Cart from "./pages/Cart/Cart";
 import DeliveryPage from './pages/Delivery/DeliveryPage'
 
 function App() {
-
-
-
   return (
     <Router>
       <Routes>

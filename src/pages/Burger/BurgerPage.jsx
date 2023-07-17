@@ -30,7 +30,7 @@ export default function BurgerPage() {
 
       <DescriptionBlock />
       <QuantityBlock />
-      <ButtonBlock />
+      {/* <ButtonBlock /> */}
     </div>
   );
 }

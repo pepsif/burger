@@ -30,7 +30,7 @@ export default function QuantityBlock(){
 
     return(
         <div className={styles.quantity_block}>
-            <span className={styles.quantity}>Кількість</span>
+            <span className={styles.quantity}>Кількість у Кошику</span>
             <div className={styles.values_block}>
                 <AiOutlineMinus style={style.quantity.minus}/>
                 <span className={styles.value}>{burgers[activeBurgerId].value}</span>

@@ -16,8 +16,6 @@ export default function Cart() {
 
     rootBlock.style.height = "90vh";
 
-    
-
     return () => {
       rootBlock.style.height = rootHeight;
     };

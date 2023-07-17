@@ -5,13 +5,13 @@ import AddIcon from '@mui/icons-material/Add';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import { useDispatch, useSelector } from "react-redux";
 import { burgersCountIncrease, burgersCountDecrease } from '../../../redux/CartSlice/CartSlice'
-import { increaseBurgerValue, decreaseBurgerValue } from '../../../redux/BurgersSlice/BurgersSlice';
+import { increaseBurgerValue, decreaseBurgerValue, deleteBurger } from '../../../redux/BurgersSlice/BurgersSlice';
 
 
 
 export default function CartItem( { id, title, value,  price, imageUrl  } ) {
    const dispatch = useDispatch();
-  
+   
 
 
 const increaseBurger = () => {
@@ -21,6 +21,9 @@ const increaseBurger = () => {
 const decreaseBurger = () => {
 dispatch(decreaseBurgerValue(id))
 dispatch(burgersCountDecrease())
+}
+const deletedBurger = () => {
+dispatch(deleteBurger(id))
 }
 
 
@@ -38,7 +41,7 @@ dispatch(burgersCountDecrease())
       </div>
       <div className="price-product-block">
         <span className="total-value">₴ {price * value }</span>
-        <DeleteOutlineIcon className="delete-icon"/>
+        <DeleteOutlineIcon className="delete-icon" onClick={ ()=> deletedBurger() }/>
       </div>
       
     </div>
