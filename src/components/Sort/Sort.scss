@@ -1,17 +1,17 @@
 .sort-section {
-margin: 10px 0;
+  margin: 10px 0;
 }
 .sort-container {
-  padding: 0 20px;
+ padding: 0 30px;
 }
 .sort-title {
-    font-weight:bold;
-    cursor: default;
+  font-weight: bold;
+  cursor: default;
 }
 select {
   font-size: 12px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   -o-appearance: none;
   text-align: right;
@@ -20,14 +20,13 @@ select {
   background-color: inherit;
   font-weight: 500;
   border: none;
-
-}
-select:hover {
+  &:hover {
     cursor: pointer;
-}
-select:focus  {
-   outline: 0;
-}
-select::-ms-expand {
+  }
+  &:focus {
+    outline: 0;
+  }
+  &::-ms-expand {
     display: none;
   }
+}

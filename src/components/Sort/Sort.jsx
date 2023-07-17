@@ -1,4 +1,4 @@
-import './Sort.css'
+import './Sort.scss'
 
 export default function Sort() {
     return(

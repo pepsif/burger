@@ -6,6 +6,7 @@ import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import { useDispatch, useSelector } from "react-redux";
 import { burgersCountIncrease, burgersCountDecrease } from '../../../redux/CartSlice/CartSlice'
 import { increaseBurgerValue, decreaseBurgerValue, deleteBurger } from '../../../redux/BurgersSlice/BurgersSlice';
+import { deleteBurgerCountReset } from "../../../redux/CartSlice/CartSlice";
 
 
 
@@ -24,6 +25,7 @@ dispatch(burgersCountDecrease())
 }
 const deletedBurger = () => {
 dispatch(deleteBurger(id))
+dispatch(deleteBurgerCountReset(value))
 }
 
 
