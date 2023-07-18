@@ -1,6 +1,6 @@
 import "./BurgersContent.css";
 import { useSelector } from "react-redux";
-import Burger from "../../components/BurgerCard/Burger";
+import Burger from "../../components/BurgerCard/Burger.jsx";
 
 
 import { useEffect } from "react";

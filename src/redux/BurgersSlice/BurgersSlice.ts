@@ -1,5 +1,6 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import Parse from "parse/dist/parse.min.js";
+import { InitialState } from '../../types/types';
 
 
 // Your Parse BACK4APP initialization configuration goes here
@@ -11,20 +12,20 @@ Parse.serverURL = PARSE_HOST_URL;
 
 const fetchBurgers = new Parse.Query("Burgers");
 const response = await fetchBurgers.first();
-const arr = await response.get("data");
+const fetchBurgersArray = await response.get("data");
 
   //  --INITIAL-STATE--
 
-const initialState = {
+const initialState:InitialState = {
   activeBurgerId: 0,
-  data: arr,
+  data: fetchBurgersArray,
 };
 
 export const burgersSlice = createSlice({
   name: "burgers",
   initialState,
   reducers: {
-    setActiveBurgerId: (state, action) => {
+    setActiveBurgerId: (state, action:PayloadAction<number>) => {
       state.activeBurgerId = action.payload;
     },
     increaseBurgerValue: (state, action) => {
