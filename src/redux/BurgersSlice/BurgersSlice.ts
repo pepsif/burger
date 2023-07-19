@@ -10,6 +10,8 @@ const PARSE_JAVASCRIPT_KEY = "6GtVNOpRPOX2uqeq0v1FNuKZnUko6pHGqQnvec5b";
 Parse.initialize(PARSE_APPLICATION_ID, PARSE_JAVASCRIPT_KEY);
 Parse.serverURL = PARSE_HOST_URL;
 
+
+
 const fetchBurgers = new Parse.Query("Burgers");
 const response = await fetchBurgers.first();
 const fetchBurgersArray = await response.get("data");
@@ -25,14 +27,14 @@ export const burgersSlice = createSlice({
   name: "burgers",
   initialState,
   reducers: {
-    setActiveBurgerId: (state, action:PayloadAction<number>) => {
+    setActiveBurgerId: (state:any, action:PayloadAction<number>) => {
       state.activeBurgerId = action.payload;
     },
-    increaseBurgerValue: (state, action) => {
+    increaseBurgerValue: (state:any, action:any) => {
      
       state.data[action.payload].value += 1;
     },
-    decreaseBurgerValue: (state, action) => {
+    decreaseBurgerValue: (state:any, action:any) => {
       
       if (state.data[action.payload].value === 0) return;
       state.data[action.payload].value -= 1;
