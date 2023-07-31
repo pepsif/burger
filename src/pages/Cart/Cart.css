@@ -18,3 +18,9 @@
  .payment-button {
     background-color: #72706c;
  }
+
+ .empty-cart-slogan {
+    text-align: center;
+    margin-top: 10%;
+    font-size: 24px;
+ }

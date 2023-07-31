@@ -10,6 +10,7 @@ export default function Cart() {
  const burgers = useSelector(state => state.burgers.data)
  const result = burgers.filter(el => el.value > 0)
  
+ console.log(typeof result )
   useEffect(() => {
     const rootBlock = document.getElementById("root");
     const rootHeight = rootBlock.style.height;
@@ -27,10 +28,10 @@ export default function Cart() {
        <CartReturnBlock/>
       <div className="cart-items-block">
         {
-          result.map((el,i) => {
+          (result.length > 0) ? result.map((el,i) => {
            return <CartItem  {...el} key={i}/>
             
-          })
+          }) : <p className="empty-cart-slogan">На жаль ви нічого не купили :(</p>
         }
         
       </div>
