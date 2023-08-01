@@ -1,4 +1,5 @@
 import "./Cart.css";
+import React from "react";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import CartReturnBlock from "./CartReturnBlock/CartReturnBlock";
@@ -8,22 +9,35 @@ import Button from '@mui/material/Button';
 
 export default function Cart() {
  const burgers = useSelector(state => state.burgers.data)
- const result = burgers.filter(el => el.value > 0)
- 
- console.log(typeof result )
+ const result = burgers.filter(el => el.value > 0);
+
+
+    useEffect(() => {
+        if( !localStorage.getItem('cart') ) {
+            const json = JSON.stringify(result)
+            localStorage.setItem('cart',json)
+            alert("no cart")
+        }
+        const json = JSON.stringify(result)
+        localStorage.setItem('cart',json)
+
+        console.log(localStorage.getItem('cart'))
+
+
+    }, [result,burgers]);
+
+
   useEffect(() => {
     const rootBlock = document.getElementById("root");
     const rootHeight = rootBlock.style.height;
-
-    rootBlock.style.height = "90vh";
+      rootBlock.style.height = "90vh";
 
     return () => {
       rootBlock.style.height = rootHeight;
     };
   });
 
-  
-  return (
+    return (
     <div className="cart">
        <CartReturnBlock/>
       <div className="cart-items-block">

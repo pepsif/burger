@@ -2,8 +2,6 @@ import { createSlice } from "@reduxjs/toolkit";
 
 import Parse from "parse/dist/parse.min.js";
 
-
-
 // Your Parse BACK4APP initialization configuration goes here
 const PARSE_APPLICATION_ID = "hDCY92g5erfZ51XIvlXxdgiwDXfzBrc8gnlYJVpW";
 const PARSE_HOST_URL = "https://parseapi.back4app.com/";
@@ -15,12 +13,13 @@ const fetchBurgers = new Parse.Query("Burgers");
 const response = await fetchBurgers.first();
 const fetchBurgersArray = await response.get("data");
 
-  //  --INITIAL-STATE--
 
+  //  --INITIAL-STATE--
 const initialState = {
   activeBurgerId: 0,
   data: fetchBurgersArray,
 };
+
 
 export const burgersSlice = createSlice({
   name: "burgers",
@@ -32,6 +31,7 @@ export const burgersSlice = createSlice({
     increaseBurgerValue: (state, action) => {
      
       state.data[action.payload].value += 1;
+
     },
     decreaseBurgerValue: (state, action) => {
       
