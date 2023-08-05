@@ -1,7 +1,6 @@
 import "./BurgersContent.css";
 import { useSelector } from "react-redux";
 import Burger from "../../components/BurgerCard/Burger.tsx";
-import { useEffect } from "react";
 
 
 export default function BurgersContent() {

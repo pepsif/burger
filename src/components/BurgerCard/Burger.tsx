@@ -12,13 +12,13 @@ import { burgersCountIncrease, burgersCountDecrease } from "../../redux/CartSlic
 
 
 interface BurgerProps {
-  id: number,
-  value: number,
-  title:string,
-  rating:number,
-  price:number,
-  background:string,
-  imageUrl:string
+  id: number;
+  value: number;
+  title:string;
+  rating:number;
+  price:number;
+  background:string;
+  imageUrl:string;
 }
 
 export default function Burger({ id, value, title, rating, price, background, imageUrl }:BurgerProps) {
@@ -38,7 +38,7 @@ export default function Burger({ id, value, title, rating, price, background, im
       backgroundColor: "#f3f3f3",
       padding: "2px",
       cursor: "pointer",
-
+        margin: "6px 6px"
     },
     link: {
         textDecoration: "none"
@@ -76,7 +76,7 @@ const burgerDecrease = () => {
         <div className="burger-counter-block">
           <AiOutlineMinus style={style.buttons} onClick={()=>burgerDecrease()}/>
           <span className="burger-count">{ value }</span>
-          <AiOutlinePlus style={style.buttons} onClick={(elem)=>burgerAdd(elem)}/>
+          <AiOutlinePlus style={style.buttons} onClick={(elem)=>burgerAdd()}/>
         </div>
       </div>
     </div>

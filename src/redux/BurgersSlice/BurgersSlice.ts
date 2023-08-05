@@ -1,6 +1,9 @@
+
 import { createSlice } from "@reduxjs/toolkit";
+import { initialize } from "parse";
 
 import Parse from "parse/dist/parse.min.js";
+import { getCartFromLocaleStorage } from "../../components/utils/getCartFromLocaleStorage";
 
 // Your Parse BACK4APP initialization configuration goes here
 const PARSE_APPLICATION_ID = "hDCY92g5erfZ51XIvlXxdgiwDXfzBrc8gnlYJVpW";
@@ -13,13 +16,13 @@ const fetchBurgers = new Parse.Query("Burgers");
 const response = await fetchBurgers.first();
 const fetchBurgersArray = await response.get("data");
 
+   //  --INITIAL-STATE--
 
-  //  --INITIAL-STATE--
 const initialState = {
   activeBurgerId: 0,
   data: fetchBurgersArray,
+  cartItems: getCartFromLocaleStorage(),
 };
-
 
 export const burgersSlice = createSlice({
   name: "burgers",
@@ -31,16 +34,17 @@ export const burgersSlice = createSlice({
     increaseBurgerValue: (state, action) => {
      
       state.data[action.payload].value += 1;
-
+       state.cartItems = localStorage.setItem('cart',JSON.stringify(state.data.filter(el =>el.value>0)))   
     },
     decreaseBurgerValue: (state, action) => {
       
       if (state.data[action.payload].value === 0) return;
       state.data[action.payload].value -= 1;
+      state.cartItems = localStorage.setItem('cart',JSON.stringify(state.data.filter(el =>el.value>0)))
     },
     deleteBurger: ( state, action ) => {
-     
-     state.data[action.payload].value = 0;
+      state.data[action.payload].value = 0;
+     alert(state.data[action.payload])
      }
   },
 });

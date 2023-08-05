@@ -1,57 +1,43 @@
 import "./Cart.css";
-import React from "react";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import CartReturnBlock from "./CartReturnBlock/CartReturnBlock";
 import CartItem from "./CartItem/CartItem";
 import CartTotalSumBlock from "./CartTotalSumBlock/CartTotalSumBlock";
-import Button from '@mui/material/Button';
+import Button from "@mui/material/Button";
 
 export default function Cart() {
- const burgers = useSelector(state => state.burgers.data)
- const result = burgers.filter(el => el.value > 0);
+  const burgers = useSelector((state) => state.burgers.data);
 
-
-    useEffect(() => {
-        if( !localStorage.getItem('cart') ) {
-            const json = JSON.stringify(result)
-            localStorage.setItem('cart',json)
-            alert("no cart")
-        }
-        const json = JSON.stringify(result)
-        localStorage.setItem('cart',json)
-
-        console.log(localStorage.getItem('cart'))
-
-
-    }, [result,burgers]);
-
+  const result = burgers.filter((el) => el.value > 0);
 
   useEffect(() => {
     const rootBlock = document.getElementById("root");
     const rootHeight = rootBlock.style.height;
-      rootBlock.style.height = "90vh";
+    rootBlock.style.height = "90vh";
 
     return () => {
       rootBlock.style.height = rootHeight;
     };
   });
 
-    return (
+  return (
     <div className="cart">
-       <CartReturnBlock/>
+      <CartReturnBlock />
       <div className="cart-items-block">
-        {
-          (result.length > 0) ? result.map((el,i) => {
-           return <CartItem  {...el} key={i}/>
-            
-          }) : <p className="empty-cart-slogan">На жаль ви нічого не купили :(</p>
-        }
-        
+        {JSON.parse(localStorage.getItem("cart")).length > 0 ? (
+          JSON.parse(localStorage.getItem("cart")).map((el, i) => {
+            return <CartItem {...el} key={i} />;
+          })
+        ) : (
+          <p>На жаль ви нічого не купили</p>
+        )}
       </div>
 
       <CartTotalSumBlock />
-      <Button className="payment-button" variant="contained" >Оплатити</Button>
+      <Button className="payment-button" variant="contained">
+        Оплатити
+      </Button>
     </div>
   );
 }

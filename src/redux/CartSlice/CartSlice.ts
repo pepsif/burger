@@ -1,7 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { useSelector } from "react-redux";
+import { json } from "react-router";
+
 
 const initialState = {
   burgersCount: 0,
+ 
 };
 
 export const CartSLice = createSlice({
