@@ -1,7 +1,7 @@
 .delivery-section {
-  //  background: url(../../assets/images/burger-delivery-fast-hamburger-car-cheeseburger-as-fast-food-car-mascot-burger-car-design-logotype_726113-2926.jpg);
-  //  background-size: cover;
-  //  border-radius: 8px;
+    //background: url(../../assets/images/burger-delivery-fast-hamburger-car-cheeseburger-as-fast-food-car-mascot-burger-car-design-logotype_726113-2926.jpg);
+    //background-size: cover;
+    //border-radius: 8px;
 
     .delivery-container {
      display: flex;
@@ -13,6 +13,7 @@
         .title {
         text-align: center;
         margin: 10px 0;
+          color:#f0b944;
     } 
 
     .delivery-return-block {
@@ -47,7 +48,8 @@
     font-size: 14px;
     margin-top: auto;
     margin-bottom: 20px;
-    background-color: #9f7216;
+    background-color:#f0b944;
+     color:black;
    }
 
     }

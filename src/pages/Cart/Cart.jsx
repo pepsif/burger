@@ -21,11 +21,12 @@ export default function Cart() {
     };
   });
 
+
   return (
     <div className="cart">
       <CartReturnBlock />
       <div className="cart-items-block">
-        {JSON.parse(localStorage.getItem("cart")).length > 0 ? (
+        { localStorage.getItem('cart') && JSON.parse(localStorage.getItem("cart")).length > 0 ? (
           JSON.parse(localStorage.getItem("cart")).map((el, i) => {
             return <CartItem {...el} key={i} />;
           })

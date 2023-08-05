@@ -7,23 +7,23 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import bg from "../../assets/images/burger-delivery-fast-hamburger-car-cheeseburger-as-fast-food-car-mascot-burger-car-design-logotype_726113-2926.jpg";
 
-export default function Deivery() {
+export default function Delivery() {
 
   const styles = {
     deliverySection: {
       // background:`url(${bg})`,
     }
   }
-
   useEffect(() => {
     const rootBlock = document.getElementById("root");
     const rootHeight = rootBlock.style.height;
+    rootBlock.style.background = `url(${bg}) `;
+    rootBlock.style.backgroundSize = 'cover'
     rootBlock.style.height = "90vh";
     
-    
-      return () => {
+          return () => {
       rootBlock.style.height = rootHeight;
-      
+        rootBlock.style.background = "white";
     };
   });
 
@@ -41,28 +41,32 @@ export default function Deivery() {
         <Box
           className="box-form"
           component="form"
-          sx={{ "& > :not(style)": { m: 1, width: "100%" } }}
+          sx={{ "& > :not(style)": { m: 1, width: "100%"} }}
           noValidate
           autoComplete="off"
-          
+          sx={{input: { color: "#f0b944"}}}
         >
           <TextField
+             sx={{label: {color: "white"}}}
             className="text-input"
             id="outlined-basic"
             label="Ваше прізвище та ім'я"
             variant="outlined"
-            
+            required
+
           />
           <TextField
             id="outlined-basic"
             label="Адреса доставки"
             variant="outlined"
+            required
+
           />
           <TextField
             id="outlined-basic"
             label="Бажаний час доставки"
             variant="outlined"
-           
+           required
           />
 
           <Button className="delivery-submit" variant="contained">

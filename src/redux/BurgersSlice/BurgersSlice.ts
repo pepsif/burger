@@ -44,8 +44,12 @@ export const burgersSlice = createSlice({
     },
     deleteBurger: ( state, action ) => {
       state.data[action.payload].value = 0;
-     alert(state.data[action.payload])
-     }
+
+      const jsonParse = JSON.parse(localStorage.getItem('cart')) ;
+      const newLocalCart = jsonParse.splice(action.payload,1) ;
+      localStorage.setItem('cart',JSON.stringify(newLocalCart) )   // convert to string stringify()
+    console.log(jsonParse,newLocalCart)
+    }
   },
 });
 
