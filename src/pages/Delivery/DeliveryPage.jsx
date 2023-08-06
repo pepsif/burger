@@ -37,35 +37,36 @@ export default function Delivery() {
 
           {/* <span className="delivery-return-title">тільки в межах міста</span> */}
         </div>
-        <h6 className="title">Доставка вашого замовлення</h6>
+        <h6 className="title">Введіть дані для замовлення доставки</h6>
         <Box
           className="box-form"
           component="form"
           sx={{ "& > :not(style)": { m: 1, width: "100%"} }}
           noValidate
           autoComplete="off"
-          sx={{input: { color: "#f0b944"}}}
+          sx={ {input: { color: "#f0b944", border: "1px solid #f0b944" } ,label: { color:"#f0b944" }   } }
         >
           <TextField
-             sx={{label: {color: "white"}}}
+             
             className="text-input"
             id="outlined-basic"
             label="Ваше прізвище та ім'я"
-            variant="outlined"
+            variant="filled"
             required
+            
 
           />
           <TextField
             id="outlined-basic"
             label="Адреса доставки"
-            variant="outlined"
+            variant="filled"
             required
 
           />
           <TextField
             id="outlined-basic"
             label="Бажаний час доставки"
-            variant="outlined"
+            variant="filled"
            required
           />
 

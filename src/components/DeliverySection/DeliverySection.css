@@ -1,5 +1,6 @@
 .delivery-section {
-  /* background-color: #e0e0e0; */
+  display: flex;
+ justify-content: center;
 }
 .delivery-burger-container {
   max-width: 260px;
@@ -15,6 +16,10 @@
   
    -webkit-box-shadow: 5px 5px 12px #d1d1d1, -5px -5px 12px #ffffff;
    box-shadow: 5px 5px 12px #d1d1d1, -5px -5px 12px #ffffff;
+}
+.delivery-link {
+    display: block;
+   width: 40% !important;
 }
 
 .customize-burger-container p{

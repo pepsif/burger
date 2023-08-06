@@ -10,7 +10,6 @@ export const Header = () => {
   const dispatch = useDispatch();
   const burgersCount = useSelector( state => state.burgers.data)
 
-   
   return (
     <header>
       <div className="container header-container ">
