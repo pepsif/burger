@@ -6,10 +6,9 @@ import { Link } from "react-router-dom";
 
 import { useSelector,useDispatch } from "react-redux";
 
-
 export const Header = () => {
   const dispatch = useDispatch();
-  const burgersCount = useSelector(state=>state.cart.burgersCount);
+  const burgersCount = useSelector( state => state.burgers.data)
 
    
   return (
@@ -21,7 +20,7 @@ export const Header = () => {
           <Link to="cart">
           <div className="cart-block">
             <BsCart4 className="header-cart mr-10"/>
-             { (burgersCount) ? <span className="burgers-count">{ burgersCount }</span> : '' }
+             { (burgersCount) ? <span className="burgers-count">{JSON.parse(localStorage.getItem('cart')).length}</span> : '' }
           </div>
              
           </Link>
