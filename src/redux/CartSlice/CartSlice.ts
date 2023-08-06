@@ -1,7 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { useSelector } from "react-redux";
-import { json } from "react-router";
-
 
 const initialState = {
   burgersCount: 0,
@@ -13,15 +10,15 @@ export const CartSLice = createSlice({
   initialState,
   reducers: {
     burgersCountIncrease: (state) => {
-      state.burgersCount += 1;
+      // state.burgersCount += 1;
     },
     burgersCountDecrease: (state) => {
-      if (state.burgersCount === 0) return;
-      state.burgersCount -= 1;
+      // if (state.burgersCount === 0) return;
+      // state.burgersCount -= 1;
     },
     deleteBurgerCountReset: (state, actions) => {
       // alert(actions.payload);
-     state.burgersCount = state.burgersCount - actions.payload;
+     // state.burgersCount = state.burgersCount - actions.payload;
     },
   },
 });

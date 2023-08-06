@@ -3,7 +3,6 @@ import { createSlice } from "@reduxjs/toolkit";
 import { initialize } from "parse";
 
 import Parse from "parse/dist/parse.min.js";
-import { getCartFromLocaleStorage } from "../../components/utils/getCartFromLocaleStorage";
 
 // Your Parse BACK4APP initialization configuration goes here
 const PARSE_APPLICATION_ID = "hDCY92g5erfZ51XIvlXxdgiwDXfzBrc8gnlYJVpW";
@@ -21,7 +20,7 @@ const fetchBurgersArray = await response.get("data");
 const initialState = {
   activeBurgerId: 0,
   data: fetchBurgersArray,
-  cartItems: getCartFromLocaleStorage(),
+
 };
 
 export const burgersSlice = createSlice({
@@ -34,21 +33,19 @@ export const burgersSlice = createSlice({
     increaseBurgerValue: (state, action) => {
      
       state.data[action.payload].value += 1;
-       state.cartItems = localStorage.setItem('cart',JSON.stringify(state.data.filter(el =>el.value>0)))   
+        localStorage.setItem('cart',JSON.stringify(state.data.filter( el =>el.value > 0 )))
     },
     decreaseBurgerValue: (state, action) => {
       
       if (state.data[action.payload].value === 0) return;
       state.data[action.payload].value -= 1;
-      state.cartItems = localStorage.setItem('cart',JSON.stringify(state.data.filter(el =>el.value>0)))
+      localStorage.setItem('cart',JSON.stringify(state.data.filter( el => el.value > 0 )))
     },
     deleteBurger: ( state, action ) => {
       state.data[action.payload].value = 0;
 
-      const jsonParse = JSON.parse(localStorage.getItem('cart')) ;
-      const newLocalCart = jsonParse.splice(action.payload,1) ;
-      localStorage.setItem('cart',JSON.stringify(newLocalCart) )   // convert to string stringify()
-    console.log(jsonParse,newLocalCart)
+      localStorage.setItem('cart',JSON.stringify(state.data.filter( el => el.value > 0 )))
+    // console.log(jsonParse)
     }
   },
 });

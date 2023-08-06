@@ -9,12 +9,9 @@ import { increaseBurgerValue, decreaseBurgerValue, deleteBurger } from '../../..
 import { deleteBurgerCountReset } from "../../../redux/CartSlice/CartSlice";
 
 
-
 export default function CartItem( { id, title, value,  price, imageUrl  } ) {
 
    const dispatch = useDispatch();
-   
-
 
 const increaseBurger = () => {
   dispatch(increaseBurgerValue(id))
