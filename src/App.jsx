@@ -6,9 +6,11 @@ import { Search } from "./components/Search/Search";
 import Sort from "./components/Sort/Sort";
 import BurgersContent from "./pages/BurgersContent/BurgersContent.jsx";
 import BurgerPage from "./pages/Burger/BurgerPage.jsx";
-import DeliverySection from "./components/DeliverySection/DeliverySection.jsx";
+import CourierDelivery from "./components/CourierDelivery/CourierDelivery.jsx";
 import Cart from "./pages/Cart/Cart";
-import DeliveryPage from './pages/Delivery/DeliveryPage'
+import DeliveryPage from './pages/Delivery/DeliveryPage';
+import {Menu} from './pages/Menu/Menu.tsx';
+import {UserRegistration} from './pages/UserRegistration/UserRegistration'
 
 function App() {
   return (
@@ -21,13 +23,22 @@ function App() {
               <Search />
               <Sort />
               <BurgersContent />
-              <DeliverySection />
+              <CourierDelivery />
+              {/*<Menu/>*/}
             </>
           }
         />
         <Route path="burger" element={<BurgerPage />} />
         <Route path="cart" element={ <Cart/> }/>
         <Route path="delivery" element={ <DeliveryPage/> }/>
+        <Route path="registration" element={ <UserRegistration/> }/>
+
+        
+        
+
+
+
+
       </Routes>
     </Router>
   );

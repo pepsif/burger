@@ -10,8 +10,7 @@ a {
 body {
   margin: 0;
    background-color: #f0b944;
-   /* background: url(../src/assets/images/razvody_tsarapiny_tekstura_182896_1920x1200.jpg) 0 0 no-repeat;
-   background-size: cover; */
+
 }
 
 #root {
@@ -19,7 +18,7 @@ body {
   padding: 20px 0;
   font-family: Inter, sans-serif;
   width: 90%;
-   background-color: #ffffff;
+
    border-radius: 40px;
    text-shadow: 1px 1px 10px rgb(184, 173, 173);
    position: relative;

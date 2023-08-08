@@ -1,6 +1,5 @@
 
 import { createSlice } from "@reduxjs/toolkit";
-import { initialize } from "parse";
 
 import Parse from "parse/dist/parse.min.js";
 
