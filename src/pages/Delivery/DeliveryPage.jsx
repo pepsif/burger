@@ -24,8 +24,8 @@ export default function Delivery() {
     });
 
     return (
-        <div style={styles.deliverySection}>
-            <div className={styles.deliveryContainer}>
+        <div className={styles.deliverySection}>
+            <div className={"container"+" "+ styles.deliveryContainer}>
                 <div className={styles.deliveryReturnBlock}>
                     <Link to="/">
                         <IoIosArrowBack className={styles.deliveryReturnButton}/>
@@ -43,7 +43,7 @@ export default function Delivery() {
                 >
                     <TextField
 
-                        className="text-input"
+                        className={styles.textInput}
                         id="outlined-basic"
                         label="Ваше прізвище та ім'я"
                         variant="filled"
@@ -52,7 +52,7 @@ export default function Delivery() {
 
                     />
                     <TextField
-                        className="text-input"
+                        className={styles.textInput}
                         id="outlined-basic"
                         label="Адреса доставки"
                         variant="filled"
@@ -60,20 +60,20 @@ export default function Delivery() {
 
                     />
                     <TextField
-                        className="text-input"
+                        className={styles.textInput}
                         id="outlined-basic"
                         label="Бажаний час доставки"
                         variant="filled"
                         required
                     />
 
-                    <Button className="delivery-submit" variant="contained">
+                    <Button className={styles.deliverySubmit} variant="contained">
                         Підтвердити доставку
                     </Button>
                 </Box>
 
-                <p className="delivery-price">Сумма доставки: 30 грн</p>
-                <p className="total-delivery-price">Загальний рахунок: 230 грн</p>
+                <p className={styles.deliveryPrice}>Сумма доставки: 30 грн</p>
+                <p className={styles.totalDeliveryPrice}>Загальний рахунок: 230 грн</p>
             </div>
         </div>
     );

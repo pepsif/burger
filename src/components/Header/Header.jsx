@@ -4,11 +4,7 @@ import { VscAccount } from "react-icons/vsc";
 import { BsCart4 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-import { useSelector,useDispatch } from "react-redux";
-
 export const Header = () => {
-  // const dispatch = useDispatch();
-  // const burgersCount = useSelector( state => state.burgers.data)
 
   return (
     <header>
@@ -23,8 +19,10 @@ export const Header = () => {
           </div>
              
           </Link>
-             
-              <VscAccount className="header-avatar"/>
+             <Link to="/user-login">
+                 <VscAccount className="header-avatar"/>
+             </Link>
+
           </div>
 
       </div>

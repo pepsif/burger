@@ -11,6 +11,7 @@ import Cart from "./pages/Cart/Cart";
 import DeliveryPage from './pages/Delivery/DeliveryPage';
 import {Menu} from './pages/Menu/Menu.tsx';
 import {UserRegistration} from './pages/UserRegistration/UserRegistration'
+import {UserLogin} from "./pages/UserLogin/UserLogin.jsx";
 
 function App() {
   return (
@@ -31,12 +32,8 @@ function App() {
         <Route path="burger" element={<BurgerPage />} />
         <Route path="cart" element={ <Cart/> }/>
         <Route path="delivery" element={ <DeliveryPage/> }/>
-        <Route path="registration" element={ <UserRegistration/> }/>
-
-        
-        
-
-
+        <Route path="user-registration" element={ <UserRegistration/> }/>
+          <Route path="user-login" element={ <UserLogin/> }/>
 
 
       </Routes>

@@ -13,9 +13,9 @@ export default function CourierDelivery() {
 
                     <div className={styles.courierBlock}>
                         <img className={styles.courierImage} src={courier}></img>
-                        <LunchDiningOutlinedIcon className="custom-burger-image animate__animated animate__pulse animate__infinite" />
-                        <LunchDiningOutlinedIcon className="custom-burger-image animate__animated animate__headShake animate__infinite animate__slower" />
-                        <LunchDiningOutlinedIcon className="custom-burger-image animate__animated animate__pulse animate__infinite animate__slow" />
+                        <LunchDiningOutlinedIcon className={styles.customBurgerImage + " "+ "animate__animated animate__pulse animate__infinite"} />
+                        <LunchDiningOutlinedIcon className={styles.customBurgerImage + " "+ " animate__animated animate__headShake animate__infinite animate__slower"} />
+                        <LunchDiningOutlinedIcon className={styles.customBurgerImage + " "+ "animate__animated animate__pulse animate__infinite animate__slow"} />
                     </div>
 
 

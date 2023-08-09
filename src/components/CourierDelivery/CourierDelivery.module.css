@@ -1,44 +1,50 @@
 .CourierDeliverySection {
-  display: flex;
- justify-content: center;
-}
-.deliveryCourierContainer {
-  max-width: 300px;
-    height: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px auto;
-  background-color: #ffffff;
-    font-size: 10px;
-   padding: 4px 40px;
-   -webkit-border-radius: 70px;
-   /*border-radius: 70px;*/
+    display: flex;
+    justify-content: center;
 
-   -webkit-box-shadow: 5px 5px 12px #d1d1d1, -5px -5px 12px #ffffff;
-   box-shadow: 5px 5px 12px #d1d1d1, -5px -5px 12px #ffffff;
 }
+
+.deliveryCourierContainer {
+    max-width: 300px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px auto;
+    background-color: #ffffff;
+    font-size: 10px;
+    padding: 4px 40px;
+    -webkit-border-radius: 70px;
+    /*border-radius: 70px;*/
+
+    -webkit-box-shadow: 5px 5px 12px #d1d1d1, -5px -5px 12px #ffffff;
+    box-shadow: 5px 5px 12px #d1d1d1, -5px -5px 12px #ffffff;
+}
+
 .deliveryLink {
     display: block;
-   width: 100% ;
+    width: 100%;
 }
 
-.customize-burger-container p{
-text-align: center;
-font-weight: 600;
-font-size: 14px;
-/* padding: 4px 0; */
+.customize-burger-container p {
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    /* padding: 4px 0; */
 
 }
+
 .courierBlock {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
+
 .courierImage {
-  width: 100px;
-  height: 80px;
+    width: 100px;
+    height: 80px;
 
 }
+
 .customBurgerImage {
     width: 100px;
     height: 100px;
@@ -48,8 +54,43 @@ font-size: 14px;
     align-self: center;
     margin-right: 4px;
 }
-.deliveryButtonSlogan{
-  margin: 2px;
-  font-size: 14px;
-  transform: translateY(-6px);
+
+.deliveryButtonSlogan {
+    margin: 2px;
+    font-size: 14px;
+    transform: translateY(-6px);
+    text-align: center;
+}
+
+@media (min-width: 320px) {
+
+ .deliveryCourierContainer {
+     padding: 10px 20px;
+ }
+
+}
+
+@media (min-width: 768px) {
+
+    .CourierDeliverySection {
+        padding: 40px 0;
+
+        .deliveryCourierContainer {
+            display: flex;
+            justify-content: center;
+          padding: 40px 60px;
+
+
+            .courierImage {
+                width: 140px;
+                height: 120px;
+            }
+            .deliveryButtonSlogan {
+                font-size: 18px;
+
+            }
+        }
+
+
+    }
 }

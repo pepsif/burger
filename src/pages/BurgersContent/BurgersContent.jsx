@@ -2,7 +2,6 @@ import "./BurgersContent.css";
 import { useSelector } from "react-redux";
 import Burger from "../../components/BurgerCard/Burger.tsx";
 
-
 export default function BurgersContent() {
   const burgers = useSelector((state) => state.burgers.data);
 
