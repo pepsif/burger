@@ -1,7 +1,8 @@
 import Parse from "parse/dist/parse.min.js";
 import {keys }from "./_key.js"
+import {BurgerDto} from "../types/burgerDto.mts";
 
-export async function fetchBurgers() {
+export async function fetchBurgers():Promise<BurgerDto[]> {
 
     const PARSE_APPLICATION_ID = keys.PARSE_APPLICATION_ID;
     const PARSE_HOST_URL = keys.PARSE_HOST_URL;
@@ -11,7 +12,7 @@ export async function fetchBurgers() {
 
     const fetchBurgers = new Parse.Query("Burgers");
     const response = await fetchBurgers.first();
-    const fetchBurgersArray = await response.get("data");
+    const fetchBurgersArray = await response?.get("data");
 
 
     return fetchBurgersArray

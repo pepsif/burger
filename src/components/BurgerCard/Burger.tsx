@@ -1,85 +1,84 @@
 import "./Burger.css";
-import React from "react";
+import React, { lazy } from "react";
 // import heart from "../../assets/icons/PikPng.com_restart-icon-png_3823370.png";
 import heartOutline from "../../assets/icons/pngwing.com (72).png";
-import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
-import { TiStar } from "react-icons/ti";
-import {Link } from "react-router-dom";
+import {AiOutlinePlus, AiOutlineMinus} from "react-icons/ai";
+import {TiStar} from "react-icons/ti";
+import {Link} from "react-router-dom";
 
-import {  useDispatch } from "react-redux";
-import { setActiveBurgerId, increaseBurgerValue, decreaseBurgerValue } from "../../redux/BurgersSlice/BurgersSlice";
-import { burgersCountIncrease, burgersCountDecrease } from "../../redux/CartSlice/CartSlice";
-
+import {useDispatch} from "react-redux";
+import {setActiveBurgerId, increaseBurgerValue, decreaseBurgerValue} from "../../redux/BurgersSlice/BurgersSlice";
+import {burgersCountIncrease, burgersCountDecrease} from "../../redux/CartSlice/CartSlice";
 
 interface BurgerProps {
-  id: number;
-  value: number;
-  title:string;
-  rating:number;
-  price:number;
-  background:string;
-  imageUrl:string;
+    id: number;
+    value: number;
+    title: string;
+    rating: number;
+    price: number;
+    background: string;
+    imageUrl: string;
 }
 
-export default function Burger({ id, value, title, rating, price, background, imageUrl }:BurgerProps) {
+export default function Burger({id, value, title, rating, price, background, imageUrl}: BurgerProps) {
     const dispatch = useDispatch();
     // const activeBurgerId = useSelector(state => state.burgers.activeBurgerId);
 
-        const style = {
-    background: background,
+    const style = {
+        background: background,
 
-    star: {
-      color: "#f7bd44",
-      width: 16,
-      height: 16,
-    },
-    buttons: {
-      borderRadius: "50%",
-      backgroundColor: "#f3f3f3",
-      padding: "2px",
-      cursor: "pointer",
-        margin: "6px 6px"
-    },
-    link: {
-        textDecoration: "none"
-    }
-  };
-const burgerAdd = () => {
+        star: {
+            color: "#f7bd44",
+            width: 16,
+            height: 16,
+        },
+        buttons: {
+            borderRadius: "50%",
+            backgroundColor: "#f3f3f3",
+            padding: "2px",
+            cursor: "pointer",
+            margin: "6px 6px"
+        },
+        link: {
+            textDecoration: "none"
+        }
+    };
+    const burgerAdd = () => {
         dispatch(burgersCountIncrease())
-       dispatch(increaseBurgerValue(id))
-    
-}
-const burgerDecrease = () => {
-   if(value === 0) return
-    dispatch(burgersCountDecrease())
-    dispatch(decreaseBurgerValue(id))
-}
-  return (
+        dispatch(increaseBurgerValue(id))
 
-    <div className="burger-card" style={style}>
-        <Link to="burger" style={style.link} onClick={()=> dispatch(setActiveBurgerId(id))}>
-      <img className="burger-image" src= { imageUrl } alt="burger"></img>
-        </Link>
-      <div className="rating-block">
-        <TiStar style={style.star} />
-        <span>{rating}</span>
-      </div>
-      <div className="burger-heart">
-        <img className="burger-heart" src={heartOutline} alt="heart icon"></img>
-      </div>
-      <div className="description-block d-flex align-center">
-        <div className="burger-title-block">
-          {title} <br></br>
-          <span className="burger-price">₴ {price}</span>
+    }
+    const burgerDecrease = () => {
+        if (value === 0) return
+        dispatch(burgersCountDecrease())
+        dispatch(decreaseBurgerValue(id))
+    }
+    return (
+
+        <div className="burger-card" style={style}>
+            <Link to="burger" style={style.link} onClick={() => dispatch(setActiveBurgerId(id))}>
+                <img className="burger-image" src={ imageUrl } alt="burger"></img>
+            </Link>
+            <div className="rating-block">
+                <TiStar style={style.star}/>
+                <span>{rating}</span>
+            </div>
+            <div className="burger-heart">
+                <img className="burger-heart" src={heartOutline} alt="heart icon"></img>
+            </div>
+            <div className="description-block d-flex align-center">
+                <div className="burger-title-block">
+                    {title} <br></br>
+                    <span className="burger-price">₴ {price}</span>
+                </div>
+
+                <div className="burger-counter-block">
+                    <AiOutlineMinus style={style.buttons} onClick={() => burgerDecrease()}/>
+                    <span className="burger-count">{value}</span>
+                    <AiOutlinePlus style={style.buttons} onClick={(elem) => burgerAdd()}/>
+                </div>
+            </div>
         </div>
 
-        <div className="burger-counter-block">
-          <AiOutlineMinus style={style.buttons} onClick={()=>burgerDecrease()}/>
-          <span className="burger-count">{ value }</span>
-          <AiOutlinePlus style={style.buttons} onClick={(elem)=>burgerAdd()}/>
-        </div>
-      </div>
-    </div>
-
-  );
+    );
 }

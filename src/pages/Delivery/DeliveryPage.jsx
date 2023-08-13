@@ -21,7 +21,7 @@ export default function Delivery() {
             rootBlock.style.height = rootHeight;
             rootBlock.style.background = "white";
         };
-    });
+    },[]);
 
     return (
         <div className={styles.deliverySection}>

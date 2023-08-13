@@ -1,5 +1,5 @@
 import "./CartItem.scss";
-import burger from '../../../assets/burger1.png'
+
 import RemoveIcon from '@mui/icons-material/Remove';
 import AddIcon from '@mui/icons-material/Add';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';

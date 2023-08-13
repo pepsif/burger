@@ -1,6 +1,6 @@
 
 import { createSlice } from "@reduxjs/toolkit";
-import {fetchBurgers} from "../../api/fetchBurgers.js"
+import {fetchBurgers} from "../../api/fetchBurgers.mjs"
 
    //  --INITIAL-STATE--
 

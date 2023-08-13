@@ -4,18 +4,23 @@ import Parse from "parse/dist/parse.min.js";
 import {useSelector, useDispatch} from "react-redux";
 import HomeIcon from "@mui/icons-material/Home";
 import {Link} from "react-router-dom";
-import {Button, Divider, Input} from "antd";
+import {Button,  Input} from "antd";
 import {setUserAuth} from "../../redux/UserSlice/UserSlice";
 
 export const UserLogin = () => {
     const dispatch = useDispatch();
     const userAuth = useSelector((state) => state.user.userAuth);
+        //  PARSE LOCAL STATE
+    const localUserName = Parse.User.current().attributes.username;
+    const localUserVip = Parse.User.current().attributes.Vip;
+    const localUserBalance = Parse.User.current().attributes.balance;
 
     // State variables
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [currentUser, setCurrentUser] = useState(userAuth);
 
+    console.log(Parse.User.current().attributes.username)
        if(Parse.User.current() !== null) {
            dispatch(setUserAuth(true));
        } else {
@@ -90,8 +95,6 @@ export const UserLogin = () => {
                             <span className="ml-10">Повернутися на головну</span>
                     </Link>
 
-
-
                     {userAuth === true && <Button
                         onClick={() => doUserLogOut()}
                         type="primary"
@@ -141,9 +144,9 @@ export const UserLogin = () => {
                 {userAuth === true && (
                     <>
                         <h3 className="user_name">{"Кабінет користувача"}</h3>
-                        <h3 className="user_title">{`Доброго !`}</h3>
+                        <h3 className="user_title">{`Доброго дня ${Parse.User.current().attributes.username}!`}</h3>
 
-                        <div className={styles.user_section}>
+                        <div className={styles.userBlock}>
                             user info
                         </div>
 
