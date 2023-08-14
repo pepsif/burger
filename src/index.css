@@ -1,31 +1,23 @@
-h1,h2,h3,h4,h5,h6,p {
-  margin: 0;
+h1, h2, h3, h4, h5, h6, p {
+   
 }
 a {
-  text-decoration: none;
-  color: inherit;
-  
+    text-decoration: none;
+    color: inherit;
 }
-
 body {
-  margin: 0;
-   background-color: #f0b944;
-
+      background-color: #f0b944;
+}
+#root {
+    margin: 0px auto;
+    font-family: Inter, sans-serif;
+    border-radius: 40px;
+    text-shadow: 1px 1px 10px rgb(184, 173, 173);
+    background-color: rgb(245, 245, 245);
 }
 
-#root {
-  margin: 10px auto;
-  padding: 20px 0;
-  font-family: Inter, sans-serif;
-  width: 90%;
+.container {
+    max-width: 370px;
+    margin: 0 auto;
 
-   border-radius: 40px;
-   text-shadow: 1px 1px 10px rgb(184, 173, 173);
-   position: relative;
-  
-  /* background: url(../src/assets/images/White-PNG-HD.png) 0 0 no-repeat; */
-  background-size: cover;
-  
-  background-color: rgb(245, 245, 245);
-  }
-
+}

@@ -1,4 +1,4 @@
-import "./Burger.css";
+import "./Burger.scss";
 import React, { lazy } from "react";
 // import heart from "../../assets/icons/PikPng.com_restart-icon-png_3823370.png";
 import heartOutline from "../../assets/icons/pngwing.com (72).png";

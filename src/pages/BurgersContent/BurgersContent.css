@@ -17,7 +17,7 @@
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
-height: 80%;
+height: 420px;
 overflow:scroll;
 }
 
@@ -27,6 +27,18 @@ overflow:scroll;
    
     }
 
+@media (min-width: 374px) {
+
+    .burger-section {
+        height: 360px;
+    }
+    .burger-card {
+        width: 140px;
+        height: 160px;
+
+    }
+
+}
 
 @media (min-width: 768px) {
 

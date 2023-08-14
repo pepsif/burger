@@ -1,12 +1,13 @@
-import "./Search.css";
+import styles from "./Search.module.scss";
 import { FaSearch } from "react-icons/fa";
 
 export const Search = () => {
   return (
-    <section className="search">
-      <div className="container search-container d-flex justify-between">
-        <input className="input" placeholder="Search"></input>
-        <button className="button search-buton d-flex justify-center align-center"><FaSearch/></button>
+    <section className={styles.search}>
+      <div className={ "container"+" "+ styles.search_container}>
+        <input className={styles.input} placeholder="Search"></input>
+
+        <button className={styles.button }><FaSearch/></button>
       </div>
     </section>
   );

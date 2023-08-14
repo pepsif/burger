@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import  {useState} from "react";
 import styles from "./userLogin.module.scss"
 import Parse from "parse/dist/parse.min.js";
 import {useSelector, useDispatch} from "react-redux";
@@ -11,16 +11,14 @@ export const UserLogin = () => {
     const dispatch = useDispatch();
     const userAuth = useSelector((state) => state.user.userAuth);
         //  PARSE LOCAL STATE
-    const localUserName = Parse.User.current().attributes.username;
-    const localUserVip = Parse.User.current().attributes.Vip;
-    const localUserBalance = Parse.User.current().attributes.balance;
+
 
     // State variables
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [currentUser, setCurrentUser] = useState(userAuth);
 
-    console.log(Parse.User.current().attributes.username)
+
        if(Parse.User.current() !== null) {
            dispatch(setUserAuth(true));
        } else {

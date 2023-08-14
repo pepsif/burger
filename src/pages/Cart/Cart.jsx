@@ -1,5 +1,5 @@
 import "./Cart.css";
-import React, { useEffect } from "react";
+import  { useEffect } from "react";
 import { useSelector } from "react-redux";
 import CartReturnBlock from "./CartReturnBlock/CartReturnBlock";
 import CartItem from "./CartItem/CartItem";
@@ -11,15 +11,15 @@ export default function Cart() {
 
   const result = burgers.filter((el) => el.value > 0);
 
-  useEffect(() => {
-    const rootBlock = document.getElementById("root");
-    const rootHeight = rootBlock.style.height;
-    rootBlock.style.height = "90vh";
-
-    return () => {
-      rootBlock.style.height = rootHeight;
-    };
-  });
+  // useEffect(() => {
+  //   const rootBlock = document.getElementById("root");
+  //   const rootHeight = rootBlock.style.height;
+  //   rootBlock.style.height = "90vh";
+  //
+  //   return () => {
+  //     rootBlock.style.height = rootHeight;
+  //   };
+  // });
 
 
   return (

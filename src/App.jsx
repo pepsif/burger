@@ -15,6 +15,7 @@ import {UserRegistration} from './pages/UserRegistration/UserRegistration'
 import {UserLogin} from "./pages/UserLogin/UserLogin.jsx";
 
 // const BurgerPage = lazy(()=> import("./pages/Burger/BurgerPage"))
+// const DeliveryPage = lazy(()=>  import('./pages/Delivery/DeliveryPage'))
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
               <Sort />
               <BurgersContent />
               <CourierDelivery />
-              <Menu/>
+              {/* <Menu/> */}
             </>
           }
         />

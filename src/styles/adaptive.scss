@@ -1,34 +1,3 @@
-/*-371-PX- 425 PX*/
-
-@media (min-width: 374px) {
-  #root {
-    /* height: 590px !important; */
-  }
-
-  .burger-section {
-    height: 360px;
-  }
-  .burger-card {
-    width: 140px !important;
-    height: 160px !important;
-
-  }
-  .description-block {
-    margin-top: 47% !important;
-  }
-}
-
-@media (min-width: 425px) {
-  #root {
-    /* height: 600px !important; */
-  }
-  .search-container {
-    padding: 0 20px !important;
-  }
-  .input {
-    width: 70% !important;
-  }
-}
 
 /* MIN 768 PX */
 
@@ -58,8 +27,6 @@
       margin: 20px;
 
     }
-
-
 
     .burger-card {
       width: 200px !important;
@@ -95,11 +62,6 @@
     }
 
   }
-
-
-
-
-
 
 }
 

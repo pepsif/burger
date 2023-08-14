@@ -1,0 +1,72 @@
+header {
+padding: 20px 20px 0 20px;
+
+  .header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .fit_menu {
+      width: 24px;
+      height: 24px;
+    }
+
+    .header_title {
+      font-weight: 600;
+    }
+
+    .user_cart_block {
+      display: flex;
+      align-content: center;
+      
+
+      .cart_block {
+        position: relative;
+        
+        .header_cart {
+          cursor: pointer;
+          transition: .3s;
+          font-size: 26px;
+        }
+        
+        .burgers_count {
+          font-size: 12px;
+          background-color: red;
+          color: azure;
+          padding: 2px 5px;
+          border-radius: 50%;
+
+          position: absolute;
+          right: 0;
+          top: -10px;
+        }
+
+      }
+
+      .user_avatar {
+        cursor: pointer;
+        transition: .3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+        .header_avatar {
+         font-size: 24px;
+        }
+      }
+    }
+
+
+  }
+}
+
+
+.header-cart:hover, .header-avatar:hover {
+  transform: scale(1.2);
+}
+
+@media (min-width: 425px) {
+ header {
+  
+ }
+}

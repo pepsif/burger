@@ -1,6 +1,6 @@
 import styles from "./DeliveryPage.module.scss";
 import {IoIosArrowBack} from "react-icons/io";
-import {useEffect} from "react";
+import {Suspense, useEffect} from "react";
 import {Link} from "react-router-dom";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
@@ -10,22 +10,27 @@ import bg
 
 export default function Delivery() {
 
-    useEffect(() => {
-        const rootBlock = document.getElementById("root");
-        const rootHeight = rootBlock.style.height;
-        rootBlock.style.background = `url(${bg}) `;
-        rootBlock.style.backgroundSize = 'cover'
-        rootBlock.style.height = "90vh";
-
-        return () => {
-            rootBlock.style.height = rootHeight;
-            rootBlock.style.background = "white";
-        };
-    },[]);
+    // useEffect(() => {
+    //     const rootBlock = document.getElementById("root");
+    //     const rootHeight = rootBlock.style.height;
+    //     rootBlock.style.background = `url(${bg}) `;
+    //     rootBlock.style.backgroundSize = 'cover'
+    //     rootBlock.style.height = "90vh";
+    //
+    //     return () => {
+    //         rootBlock.style.height = rootHeight;
+    //         rootBlock.style.background = "white";
+    //     };
+    // },[]);
 
     return (
         <div className={styles.deliverySection}>
             <div className={"container"+" "+ styles.deliveryContainer}>
+
+                <Suspense fallback={<h3>Завантаження.....</h3>}>
+                    <h3>Завантажилось вже</h3>
+                </Suspense>
+
                 <div className={styles.deliveryReturnBlock}>
                     <Link to="/">
                         <IoIosArrowBack className={styles.deliveryReturnButton}/>

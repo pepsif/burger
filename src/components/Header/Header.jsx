@@ -1,31 +1,32 @@
-import "./Header.scss";
-import { FiMenu } from "react-icons/fi";
-import { VscAccount } from "react-icons/vsc";
-import { BsCart4 } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import styles from "./Header.module.scss";
+import {FiMenu} from "react-icons/fi";
+import {VscAccount} from "react-icons/vsc";
+import {BsCart4} from "react-icons/bs";
+import {Link} from "react-router-dom";
 
 export const Header = () => {
 
-  return (
-    <header>
-      <div className="container header-container ">
-        <FiMenu className="fit-menu ml-10"/>
-        <span className="header-title">Home</span>
-          <div className="user-card-block d-flex align-center mr-20">
-          <Link to="cart">
-          <div className="cart-block">
-            <BsCart4 className="header-cart mr-10"/>
-             { (localStorage.getItem('cart')) ? <span className="burgers-count">{JSON.parse(localStorage.getItem('cart')).length}</span> : '' }
-          </div>
-             
-          </Link>
-             <Link to="/user-login">
-                 <VscAccount className="header-avatar"/>
-             </Link>
+    return (
+        <header className={styles.header}>
+            <div className={"container" + " " + styles.header_container}>
+                <FiMenu className={styles.fit_menu}/>
+                <span className={styles.header_title}>Home</span>
+                <div className={styles.user_cart_block}>
+                    <Link to="cart">
+                        <div className={styles.cart_block}>
+                            <BsCart4 className={styles.header_cart}/>
+                            {(localStorage.getItem('cart')) ? <span
+                                className={styles.burgers_count}>{JSON.parse(localStorage.getItem('cart')).length}</span> : ''}
+                        </div>
 
-          </div>
+                    </Link>
+                    <Link className={styles.user_avatar} to="/user-login">
+                        <VscAccount className={styles.header_avatar}/>
+                    </Link>
 
-      </div>
-    </header>
-  );
+                </div>
+
+            </div>
+        </header>
+    );
 };

@@ -1,4 +1,4 @@
-import styles from "./CourierDelivery.module.css";
+import styles from "./CourierDelivery.module.scss";
 import "animate.css";
 import {Link} from "react-router-dom";
 import LunchDiningOutlinedIcon from "@mui/icons-material/LunchDiningOutlined";
