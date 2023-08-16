@@ -1,35 +1,42 @@
+.user_registration_container {
+  display: flex;
+  flex-direction: column;
+  height: 97vh;
 
-  .header_logo {
-    height: 55px;
-    margin-bottom: 20px;
-    object-fit: contain;
+
+  .user_return_block {
+    padding: 10px;
+
+    .home_link {
+      display: flex;
+      align-items: center;
+
+      .return_title {
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
   }
-  
-  .header_text_bold {
-    margin-bottom: 3px;
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 16px;
-    font-weight: bold;
+  .user_reg_title {
+    margin-top: 40px;
+   font-size: 14px;
+   
+   text-align: center;
   }
-  
-  .header_text {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 15px;
-  }
-  
-  .heading {
-    font-size: 22px;
-  }
-  
   .form_wrapper {
-    margin-top: 20px;
-    margin-bottom: 10px;
+   margin-top: 40px;
+width: 80%;
+margin: 20px auto;
+
   }
-  
-  .form_input {
-    margin-bottom: 20px;
+  .buttons_block{
+    margin: 0 auto;
+
+    .sign_button{
+margin-right: 20px;
+    }
+    .login_button {
+
+    }
   }
-  
-  .form_button {
-    width: 100%;
-  }
+}

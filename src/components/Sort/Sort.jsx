@@ -1,12 +1,12 @@
-import './Sort.scss'
+import styles from './Sort.module.scss'
 
 export default function Sort() {
     return(
-        <section className="sort-section">
-           <div className="container sort-container d-flex justify-between">
-            <span className="sort-title">Гамбургери</span>
-               <span className="sort-title">Кава</span>
-               <span className="sort-title">Напої</span>
+        <section className={styles.sort_section}>
+           <div className={"container"+" "+ styles.sort_container }>
+            <span className={styles.sort_title}>Гамбургери</span>
+               <span className={styles.sort_title}>Кава</span>
+               <span className={styles.sort_title}>Напої</span>
             <select>
             <option>Всі</option>
               <option>по Ціні: від меньшої до більшої</option>

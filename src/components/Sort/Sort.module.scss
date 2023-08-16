@@ -1,21 +1,25 @@
-.sort-section {
-  margin: 10px 0;
+.sort_section {
+  padding: 0 10px;
+ 
 }
-.sort-container {
- padding: 0 30px;
+.sort_container {
+
+ display: flex;
+ justify-content: space-between;
 }
-.sort-title {
+.sort_title {
+  font-size: 16px;
   font-weight: bold;
   cursor: default;
 }
 select {
-  font-size: 12px;
+  font-size: 16px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   -o-appearance: none;
   text-align: right;
-  width: 60px;
+  width: 30px;
   color: #aaaaaa;
   background-color: inherit;
   font-weight: 500;

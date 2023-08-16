@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react'
-import "./App.css";
+
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { AnonsmentBar } from "./components/AnonsmentBar/AnonsmentBar";
 import { Header } from "./components/Header/Header";

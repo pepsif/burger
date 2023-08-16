@@ -1,6 +1,6 @@
 import styles from "./BurgerPage.module.css";
 import { useSelector } from "react-redux";
-import { useEffect } from "react";
+
 import ReturnBlock from "./ReturnBlock/ReturnBlock";
 import QuantityBlock from "./QuantityBlock/QuantityBlock";
 import ImageBlock from "./ImageBlock/Image.block";
@@ -11,19 +11,10 @@ export default function BurgerPage() {
   const burgers = useSelector((state) => state.burgers.data);
   const activeBurgerId = useSelector((state) => state.burgers.activeBurgerId);
 
-  useEffect(() => {
-    const rootBlock = document.getElementById("root");
-
-    rootBlock.style.backgroundColor = "inherit";
-
-    return () => {
-      rootBlock.style.backgroundColor = "white";
-    };
-  });
 
   return (
     <div className={styles.burger_container + " " + "container"}>
-      <div style={{ background: burgers[activeBurgerId].background, borderRadius: "30px", }} >
+      <div style={{ background: burgers[activeBurgerId].background, borderRadius: "8% 8% 0% 0% / 10% 10% 10% 10% ", }} >
         <ReturnBlock />
         <ImageBlock />
       </div>

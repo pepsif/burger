@@ -10,9 +10,7 @@ import {setUserAuth} from "../../redux/UserSlice/UserSlice";
 export const UserLogin = () => {
     const dispatch = useDispatch();
     const userAuth = useSelector((state) => state.user.userAuth);
-        //  PARSE LOCAL STATE
-
-
+   
     // State variables
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -84,13 +82,15 @@ export const UserLogin = () => {
     };
 
     return (
-        <div className={styles.userSection}>
+        <section className={styles.user_section}>
 
-            <div className="container ">
-                <div className="user-top-block d-flex align-center">
-                    <Link to="/" className="d-flex w100p align-center">
+            <div className={"container"+" "+ styles.user_container}>
+                <div className={styles.user_top_block}>
+                    <Link to="/"  >
+                        <div className={styles.home_link}>
                             <HomeIcon fontSize="large"/>
-                            <span className="ml-10">Повернутися на головну</span>
+                            <span className={styles.return_title}>Повернутися на головну</span>
+                        </div>
                     </Link>
 
                     {userAuth === true && <Button
@@ -106,14 +106,14 @@ export const UserLogin = () => {
 
                 {userAuth === false && (
                     <>
-                        <h3 className="heading mb-10 text-center">{"Вхід в аккаунт"}</h3>
-                        <div className="form_wrapper mb-20">
+                        <h3 className={styles.user_title}>{"Вхід в аккаунт"}</h3>
+                        <div className={styles.form_wrapper}>
                             <Input
                                 value={username}
                                 onChange={(event) => setUsername(event.target.value)}
                                 placeholder="Username"
                                 size="large"
-                                className="form_input mb-5"
+                                className={styles.form_input}
                             />
                             <Input
                                 value={password}
@@ -121,22 +121,20 @@ export const UserLogin = () => {
                                 placeholder="Password"
                                 size="large"
                                 type="password"
-                                className="form_input"
+                                className={styles.form_input}
                             />
                         </div>
-                        <div className="form_buttons">
-                            <Button
+                                                    <Button
                                 onClick={() => doUserLogIn()}
                                 type="primary"
-                                className="form_button"
+                                className={styles.form_button}
                                 color={"#208AEC"}
                                 size="large"
                                 block
                             >
                                 Log In
                             </Button>
-                        </div>
-                    </>
+                                            </>
                 )}
 
                 {userAuth === true && (
@@ -147,21 +145,13 @@ export const UserLogin = () => {
                         <div className={styles.userBlock}>
                             user info
                         </div>
-
-
                     </>
                 )}
-
-
-
-                <p className="form__hint">
-                    Не маєте аккаунта?{" "}
-                    <a className="form__link" href="user-registration">
-                        Зарєєструватися
+                    <a className={styles.form_hint} href="user-registration">
+                        Не маєте аккаунта? <i>Зарєєструватися</i>
                     </a>
-                </p>
             </div>
 
-        </div>
+        </section>
     );
 };

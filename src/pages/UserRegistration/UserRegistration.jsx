@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import Parse from 'parse/dist/parse.min.js';
-import './UserRegistration.module.scss'
+import styles from './UserRegistration.module.scss'
 import { Button, Divider, Input } from 'antd';
 import {Link} from "react-router-dom";
+import HomeIcon from "@mui/icons-material/Home";
 
 export const UserRegistration = () => {
   // State variables
@@ -29,56 +30,34 @@ export const UserRegistration = () => {
   };
 
   return (
-    <div>
-      <div className="header">
-        <img
-          className="header_logo"
-          alt="Back4App Logo"
-          src={
-            'https://blog.back4app.com/wp-content/uploads/2019/05/back4app-white-logo-500px.png'
-          }
-        />
+    <div className='registration'>
+     
+      <div className={"container"+" "+ styles.user_registration_container}>
 
-      </div>
-      <div className="container">
-        <h2 className="heading">{'Рєєстрація нового користувача'}</h2>
+      <div className={styles.user_return_block}>
+                    <Link to="/"  >
+                        <div className={styles.home_link}>
+                            <HomeIcon fontSize="large"/>
+                            <span className={styles.return_title}>Повернутися на головну</span>
+                        </div>
+                    </Link>
+
+                 
+                </div>
+
+        <h2 className={styles.user_reg_title}>{'Рєєстрація нового користувача'}</h2>
         
-        <div className="form_wrapper mb-20">
-          <Input
-            value={username}
-            onChange={(event) => setUsername(event.target.value)}
-            placeholder="Ваше Ім'я"
-            size="large"
-            className="form_input mb-5"
-          />
-          <Input
-            value={password}
-            onChange={(event) => setPassword(event.target.value)}
-            placeholder="Пароль"
-            size="large"
-            type="password"
-            className="form_input"
-          />
+        <div className={styles.form_wrapper}>
+          <Input value={username} onChange={(event) => setUsername(event.target.value)} placeholder="Ваше Ім'я" size="large" className="form_input mb-5" />
+          <Input value={password} onChange={(event) => setPassword(event.target.value)} placeholder="Пароль" size="large" type="password" className="form_input" />
         </div>
-        <div className="form_buttons">
-          <Button
-            onClick={() => doUserRegistration()}
-            type="primary"
-            className="form_button"
-            color={'#208AEC'}
-            size="large"
-          >
+        <div className={styles.buttons_block}>
+          <Button onClick={() => doUserRegistration()} type="primary" className={styles.sign_button} color={'#208AEC'} size="large" >
             Sign Up
           </Button>
 
           <Link to="/user-login">
-            <Button
-
-                type="primary"
-                className="form_button ml-20"
-                color={'#208AEC'}
-                size="large"
-            >
+            <Button type="primary" className={styles.login_button} color={'#208AEC'} size="large" >
               Login
             </Button>
           </Link>

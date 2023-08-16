@@ -1,35 +1,16 @@
 import styles from "./DeliveryPage.module.scss";
 import {IoIosArrowBack} from "react-icons/io";
-import {Suspense, useEffect} from "react";
+
 import {Link} from "react-router-dom";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import bg
-    from "../../assets/images/burger-delivery-fast-hamburger-car-cheeseburger-as-fast-food-car-mascot-burger-car-design-logotype_726113-2926.jpg";
 
 export default function Delivery() {
 
-    // useEffect(() => {
-    //     const rootBlock = document.getElementById("root");
-    //     const rootHeight = rootBlock.style.height;
-    //     rootBlock.style.background = `url(${bg}) `;
-    //     rootBlock.style.backgroundSize = 'cover'
-    //     rootBlock.style.height = "90vh";
-    //
-    //     return () => {
-    //         rootBlock.style.height = rootHeight;
-    //         rootBlock.style.background = "white";
-    //     };
-    // },[]);
-
-    return (
+     return (
         <div className={styles.deliverySection}>
             <div className={"container"+" "+ styles.deliveryContainer}>
-
-                <Suspense fallback={<h3>Завантаження.....</h3>}>
-                    <h3>Завантажилось вже</h3>
-                </Suspense>
 
                 <div className={styles.deliveryReturnBlock}>
                     <Link to="/">
@@ -47,14 +28,11 @@ export default function Delivery() {
                     sx={ {input: { color: "#f0b944", border: "1px solid #f0b944" } ,label: { color:"#f0b944" }   } }
                 >
                     <TextField
-
                         className={styles.textInput}
                         id="outlined-basic"
                         label="Ваше прізвище та ім'я"
                         variant="filled"
                         required
-
-
                     />
                     <TextField
                         className={styles.textInput}
@@ -62,7 +40,6 @@ export default function Delivery() {
                         label="Адреса доставки"
                         variant="filled"
                         required
-
                     />
                     <TextField
                         className={styles.textInput}

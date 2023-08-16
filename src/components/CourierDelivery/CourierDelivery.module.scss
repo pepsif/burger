@@ -53,22 +53,22 @@
 .deliveryButtonSlogan {
     margin: 2px;
     font-size: 14px;
+    font-weight: 600;
     transform: translateY(-6px);
     text-align: center;
+
 }
 
 
 @media (min-width: 768px) {
 
     .CourierDeliverySection {
-        padding: 40px 0;
+      
 
         .deliveryCourierContainer {
             display: flex;
             justify-content: center;
-          padding: 40px 60px;
-
-
+        
             .courierImage {
                 width: 140px;
                 height: 120px;

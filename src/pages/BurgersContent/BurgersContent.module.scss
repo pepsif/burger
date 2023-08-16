@@ -1,19 +1,19 @@
-.burger-section{
+.burger_section{
      margin: 0;
      height: 320px;
      overflow-y: scroll;
     border-bottom: 2px solid #e6e6e6;
 }
-.burger-section::-webkit-scrollbar {
+.burger_section::-webkit-scrollbar {
     width: 0;
    
   }
 
-.burgers-container {
+.burgers_container {
    padding: 10px 0;  
  
 }
-.burgers-cards{
+.burgers_cards{
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
@@ -21,7 +21,7 @@ height: 420px;
 overflow:scroll;
 }
 
-.burgers-cards::-webkit-scrollbar {
+.burgers_cards::-webkit-scrollbar {
     visibility: hidden; 
     width: 0;
    
@@ -29,10 +29,10 @@ overflow:scroll;
 
 @media (min-width: 374px) {
 
-    .burger-section {
+    .burger_section {
         height: 360px;
     }
-    .burger-card {
+    .burger_card {
         width: 140px;
         height: 160px;
 
@@ -42,9 +42,8 @@ overflow:scroll;
 
 @media (min-width: 768px) {
 
-    .burger-section{
-
-        height: 500px;
+    .burger_section{
+        height: 400px;
 
     }
 
