@@ -1,5 +1,5 @@
-import "./Cart.css";
-import  { useEffect } from "react";
+import styles from './Cart.module.scss';
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import CartReturnBlock from "./CartReturnBlock/CartReturnBlock";
 import CartItem from "./CartItem/CartItem";
@@ -11,34 +11,27 @@ export default function Cart() {
 
   const result = burgers.filter((el) => el.value > 0);
 
-  // useEffect(() => {
-  //   const rootBlock = document.getElementById("root");
-  //   const rootHeight = rootBlock.style.height;
-  //   rootBlock.style.height = "90vh";
-  //
-  //   return () => {
-  //     rootBlock.style.height = rootHeight;
-  //   };
-  // });
-
 
   return (
-    <div className="cart">
-      <CartReturnBlock />
-      <div className="cart-items-block">
-        { localStorage.getItem('cart') && JSON.parse(localStorage.getItem("cart")).length > 0 ? (
-          JSON.parse(localStorage.getItem("cart")).map((el, i) => {
-            return <CartItem {...el} key={i} />;
-          })
-        ) : (
-          <p>На жаль ви нічого не купили</p>
-        )}
-      </div>
+    <section className={styles.cart}>
+      <div className={'container'+' '+ styles.cart_container }>
+        <CartReturnBlock />
+        <div className={styles.cart_items_block}>
+          {localStorage.getItem("cart") &&
+          JSON.parse(localStorage.getItem("cart")).length > 0 ? (
+            JSON.parse(localStorage.getItem("cart")).map((el, i) => {
+              return <CartItem {...el} key={i} />;
+            })
+          ) : (
+            <p>На жаль ви нічого не купили</p>
+          )}
+        </div>
 
-      <CartTotalSumBlock />
-      <Button className="payment-button" variant="contained">
-        Оплатити
-      </Button>
-    </div>
+        <CartTotalSumBlock />
+        <Button className={styles.payment_button} variant="contained">
+          Оплатити
+        </Button>
+      </div>
+    </section>
   );
 }

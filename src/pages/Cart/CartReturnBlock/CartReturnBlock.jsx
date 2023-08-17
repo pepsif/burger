@@ -1,15 +1,15 @@
 import { Link } from 'react-router-dom';
-import './CartReturnBlock.scss';
+import styles from './CartReturnBlock.module.scss';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 
 export default function CartReturnBlock() {
     return(
-        <div className='return-block'>
+        <div className={styles.return_block}>
         <Link to="/">
-            <NavigateBeforeIcon className='return-icon'/>
+            <NavigateBeforeIcon className={styles.return_icon}/>
         </Link>
            
-           <span className='cart-title'>Кошик</span>
+           <span className={styles.cart_title}>Кошик</span>
         </div>
     )
 }

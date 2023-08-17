@@ -147,9 +147,10 @@ export const UserLogin = () => {
                         </div>
                     </>
                 )}
-                    <a className={styles.form_hint} href="user-registration">
-                        Не маєте аккаунта? <i>Зарєєструватися</i>
-                    </a>
+                <Link className={styles.form_hint} to="/user-registration">
+Не маєте аккаунта? <i>Зарєєструватися</i>
+                </Link>
+                    
             </div>
 
         </section>

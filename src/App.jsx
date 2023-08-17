@@ -10,7 +10,7 @@ import BurgerPage from "./pages/Burger/BurgerPage.jsx";
 import CourierDelivery from "./components/CourierDelivery/CourierDelivery.jsx";
 import Cart from "./pages/Cart/Cart";
 import DeliveryPage from './pages/Delivery/DeliveryPage';
- import {Menu} from './pages/Menu/Menu.tsx';
+ import {Menu} from './pages/Menu/Menu.jsx';
 import {UserRegistration} from './pages/UserRegistration/UserRegistration'
 import {UserLogin} from "./pages/UserLogin/UserLogin.jsx";
 
@@ -29,7 +29,7 @@ function App() {
               <Sort />
               <BurgersContent />
               <CourierDelivery />
-              {/* <Menu/> */}
+              <Menu/>
             </>
           }
         />

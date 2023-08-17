@@ -1,0 +1,36 @@
+.cart {
+
+  .cart_container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 98vh;
+
+
+    .cart_items_block {
+      flex-grow: 1;
+      overflow-x: scroll;
+      margin: 10px 0;
+    }
+  }
+}
+
+.cart_items_block::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.payment_button {
+  background-color: #72706c;
+
+  width: 200px;
+ align-self: center;
+  margin-bottom: 20px !important;
+
+}
+
+.empty_cart_slogan {
+  text-align: center;
+  margin-top: 10%;
+  font-size: 24px;
+}
