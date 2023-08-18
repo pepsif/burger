@@ -9,6 +9,10 @@ padding: 20px 20px 0 20px;
     .fit_menu {
       width: 24px;
       height: 24px;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     .header_title {
@@ -27,6 +31,7 @@ padding: 20px 20px 0 20px;
           cursor: pointer;
           transition: .3s;
           font-size: 26px;
+          margin-right: 10px;
         }
         
         .burgers_count {

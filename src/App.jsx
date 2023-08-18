@@ -13,11 +13,14 @@ import DeliveryPage from './pages/Delivery/DeliveryPage';
  import {Menu} from './pages/Menu/Menu.jsx';
 import {UserRegistration} from './pages/UserRegistration/UserRegistration'
 import {UserLogin} from "./pages/UserLogin/UserLogin.jsx";
+import { useSelector } from 'react-redux';
 
 // const BurgerPage = lazy(()=> import("./pages/Burger/BurgerPage"))
 // const DeliveryPage = lazy(()=>  import('./pages/Delivery/DeliveryPage'))
 
 function App() {
+  const menuOn = useSelector(state => state.menuOnOff.menuOn)
+
   return (
     <Router>
       <Routes>
@@ -29,7 +32,7 @@ function App() {
               <Sort />
               <BurgersContent />
               <CourierDelivery />
-              <Menu/>
+              {menuOn && <Menu/>}
             </>
           }
         />

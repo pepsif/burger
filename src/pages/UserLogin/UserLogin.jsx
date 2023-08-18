@@ -96,7 +96,7 @@ export const UserLogin = () => {
                     {userAuth === true && <Button
                         onClick={() => doUserLogOut()}
                         type="primary"
-                        className="form_button"
+                        className={styles.form_button}
                         color={"#208AEC"}
                         size="small"
                     >
@@ -139,11 +139,23 @@ export const UserLogin = () => {
 
                 {userAuth === true && (
                     <>
-                        <h3 className="user_name">{"Кабінет користувача"}</h3>
-                        <h3 className="user_title">{`Доброго дня ${Parse.User.current().attributes.username}!`}</h3>
+                        
+                        <h3 className={styles.user_title}>{`Доброго дня ${Parse.User.current().attributes.username}!`}</h3>
 
-                        <div className={styles.userBlock}>
-                            user info
+                        <div className={styles.user_block}>
+                          <table className={styles.user_table}>
+                          <tr>
+                            <td>Vip: </td>
+                            <td style={{textAlign: 'right'}}>{` ${ (Parse.User.current().attributes.Vip) ? "Віп статус куплено" : "Віп не куплено"  }`}</td>
+                          </tr>
+                          <tr>
+                            <td>Баланс: </td>
+                            <td style={{textAlign: 'right'}}>{` ${ (Parse.User.current().attributes.balance) } коїнів`}</td>
+                          </tr>
+                           
+                          
+
+                          </table>
                         </div>
                     </>
                 )}

@@ -33,9 +33,9 @@ export default function Delivery() {
             <Field className={styles.textInput} id="adressDelivery" name="adressDelivery"  />
 
             <label htmlFor="desirTimeDelivery">Бажаний час доставки</label>
-            <Field className={styles.textInput} id="desireTimeDelivery" name="desireTimeDelivery" placeholder="10-00" />
+            <Field className={styles.textInput} id="desireTimeDelivery" name="desireTimeDelivery"  />
            
-            <button className={styles.deliverySubmit} type="submit">Submit</button>
+            <button className={styles.deliverySubmit} type="submit">Підтвердити Замовлення</button>
           </Form>
         </Formik>
 
