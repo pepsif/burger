@@ -24,7 +24,7 @@ export default function Burger({id, value, title, rating, price, background, ima
     const dispatch = useDispatch();
     // const activeBurgerId = useSelector(state => state.burgers.activeBurgerId);
 
-    console.log(imageUrl)
+    console.log('fggfg',imageUrl)
     const style = {
         background: background,
 
