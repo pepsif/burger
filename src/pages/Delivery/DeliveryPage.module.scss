@@ -50,7 +50,7 @@ color:#f0b944;
 
       .textInput {
         margin-bottom: 12px;
-        padding: 4px;
+        padding: 4px 6px;
         border-radius: 6px;
         border: none;
         background-color: rgba(255, 192, 2, 0.4);
@@ -60,7 +60,7 @@ color:#f0b944;
           background-color: rgba(189, 149, 18, 0.2);
         }
         &:focus-visible {
-          background-color: rgb(179, 51, 0);
+         border: 1px solid white;
           outline: none;
         }
       }

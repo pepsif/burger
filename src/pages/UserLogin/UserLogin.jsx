@@ -1,170 +1,183 @@
-import  {useState} from "react";
-import styles from "./userLogin.module.scss"
+import { useState } from "react";
+import styles from "./userLogin.module.scss";
 import Parse from "parse/dist/parse.min.js";
-import {useSelector, useDispatch} from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import HomeIcon from "@mui/icons-material/Home";
-import {Link} from "react-router-dom";
-import {Button,  Input} from "antd";
-import {setUserAuth} from "../../redux/UserSlice/UserSlice";
+import { Link } from "react-router-dom";
+import { Button, Input } from "antd";
+import { setUserAuth } from "../../redux/UserSlice/UserSlice";
+import { keys } from "../../api/_key";
 
 export const UserLogin = () => {
-    const dispatch = useDispatch();
-    const userAuth = useSelector((state) => state.user.userAuth);
-   
-    // State variables
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
-    const [currentUser, setCurrentUser] = useState(userAuth);
+    //Initialize Parse
+    Parse.initialize(keys.PARSE_APPLICATION_ID, keys.PARSE_JAVASCRIPT_KEY);
+    Parse.serverURL = "https://parseapi.back4app.com/";
+
+  const dispatch = useDispatch();
+  const userAuth = useSelector((state) => state.user.userAuth);
+
+  // State variables
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [currentUser, setCurrentUser] = useState(userAuth);
 
 
-       if(Parse.User.current() !== null) {
-           dispatch(setUserAuth(true));
-       } else {
-           dispatch(setUserAuth(false));
-       }
-    // Function that will return current user and also update current username
-    const getCurrentUser = async function () {
-        const currentUser = await Parse.User.current();
-        // Update state variable holding current user
-        setCurrentUser(currentUser);
 
-        return currentUser;
-    };
+  if (Parse.User.current() !== null) {
+    dispatch(setUserAuth(true));
+    
+  } else {
+    dispatch(setUserAuth(false));
+  }
+  // Function that will return current user and also update current username
+  const getCurrentUser = async function () {
+    const currentUser = await Parse.User.current();
+    // Update state variable holding current user
+    setCurrentUser(currentUser);
 
-    const doUserLogIn = async function () {
-        // Note that these values come from state variables that we've declared before
-        const usernameValue = username;
-        const passwordValue = password;
-        try {
-            const loggedInUser = await Parse.User.logIn(usernameValue, passwordValue);
-            // logIn returns the corresponding ParseUser object
-            alert(
-                `Success! User ${loggedInUser.get(
-                    "username"
-                )} has successfully signed in!`
-            );
-            // To verify that this is in fact the current user, `current` can be used
-            const currentUser = await Parse.User.current();
-            console.log(loggedInUser === currentUser);
-            // Clear input fields
-            setUsername("");
-            setPassword("");
-            // Update state variable holding current user
-            await getCurrentUser();
+    return currentUser;
+  };
 
-            if (currentUser != null) {
-                dispatch(setUserAuth(true));
-            } else {
-                dispatch(setUserAuth(false));
-            }
-            return true;
-        } catch (error) {
-            // Error can be caused by wrong parameters or lack of Internet connection
-            alert(`Error! ${error.message}`);
-            return false;
-        }
-    };
-    const doUserLogOut = async function () {
-        try {
-            await Parse.User.logOut();
-            // To verify that current user is now empty, currentAsync can be used
-            const currentUser = await Parse.User.current();
-            if (currentUser === null) {
-                alert("Success! No user is logged in anymore!");
-            }
-            // Update state variable holding current user
-            getCurrentUser();
-            return true;
-        } catch (error) {
-            alert(`Error! ${error.message}`);
-            return false;
-        }
-    };
+  const doUserLogIn = async function () {
+    // Note that these values come from state variables that we've declared before
+    const usernameValue = username;
+    const passwordValue = password;
+    try {
+      const loggedInUser = await Parse.User.logIn(usernameValue, passwordValue);
+      // logIn returns the corresponding ParseUser object
+      alert(
+        `Success! User ${loggedInUser.get(
+          "username"
+        )} has successfully signed in!`
+      );
+      // To verify that this is in fact the current user, `current` can be used
+      const currentUser = await Parse.User.current();
+      console.log(loggedInUser === currentUser);
+      // Clear input fields
+      setUsername("");
+      setPassword("");
+      // Update state variable holding current user
+      await getCurrentUser();
 
-    return (
-        <section className={styles.user_section}>
+    //   if (currentUser != null) {
+    //     dispatch(setUserAuth(true));
+    //   } else {
+    //     dispatch(setUserAuth(false));
+    //   }
+      return true;
+    } catch (error) {
+      // Error can be caused by wrong parameters or lack of Internet connection
+      alert(`Error! ${error.message}`);
+      return false;
+    }
+  };
+  const doUserLogOut = async function () {
+    try {
+      await Parse.User.logOut();
+      // To verify that current user is now empty, currentAsync can be used
+      const currentUser = await Parse.User.current();
+      if (currentUser === null) {
+        alert("Success! No user is logged in anymore!");
+      }
+      // Update state variable holding current user
+      getCurrentUser();
+      return true;
+    } catch (error) {
+      alert(`Error! ${error.message}`);
+      return false;
+    }
+  };
 
-            <div className={"container"+" "+ styles.user_container}>
-                <div className={styles.user_top_block}>
-                    <Link to="/"  >
-                        <div className={styles.home_link}>
-                            <HomeIcon fontSize="large"/>
-                            <span className={styles.return_title}>Повернутися на головну</span>
-                        </div>
-                    </Link>
-
-                    {userAuth === true && <Button
-                        onClick={() => doUserLogOut()}
-                        type="primary"
-                        className={styles.form_button}
-                        color={"#208AEC"}
-                        size="small"
-                    >
-                        Log Out
-                    </Button>}
-                </div>
-
-                {userAuth === false && (
-                    <>
-                        <h3 className={styles.user_title}>{"Вхід в аккаунт"}</h3>
-                        <div className={styles.form_wrapper}>
-                            <Input
-                                value={username}
-                                onChange={(event) => setUsername(event.target.value)}
-                                placeholder="Username"
-                                size="large"
-                                className={styles.form_input}
-                            />
-                            <Input
-                                value={password}
-                                onChange={(event) => setPassword(event.target.value)}
-                                placeholder="Password"
-                                size="large"
-                                type="password"
-                                className={styles.form_input}
-                            />
-                        </div>
-                                                    <Button
-                                onClick={() => doUserLogIn()}
-                                type="primary"
-                                className={styles.form_button}
-                                color={"#208AEC"}
-                                size="large"
-                                block
-                            >
-                                Log In
-                            </Button>
-                                            </>
-                )}
-
-                {userAuth === true && (
-                    <>
-                        
-                        <h3 className={styles.user_title}>{`Доброго дня ${Parse.User.current().attributes.username}!`}</h3>
-
-                        <div className={styles.user_block}>
-                          <table className={styles.user_table}>
-                          <tr>
-                            <td>Vip: </td>
-                            <td style={{textAlign: 'right'}}>{` ${ (Parse.User.current().attributes.Vip) ? "Віп статус куплено" : "Віп не куплено"  }`}</td>
-                          </tr>
-                          <tr>
-                            <td>Баланс: </td>
-                            <td style={{textAlign: 'right'}}>{` ${ (Parse.User.current().attributes.balance) } коїнів`}</td>
-                          </tr>
-                           
-                          
-
-                          </table>
-                        </div>
-                    </>
-                )}
-                <Link className={styles.form_hint} to="/user-registration">
-Не маєте аккаунта? <i>Зарєєструватися</i>
-                </Link>
-                    
+  return (
+    <section className={styles.user_section}>
+      <div className={"container" + " " + styles.user_container}>
+        <div className={styles.user_top_block}>
+          <Link to="/">
+            <div className={styles.home_link}>
+              <HomeIcon fontSize="large" />
+              <span className={styles.return_title}>
+                Повернутися на головну
+              </span>
             </div>
+          </Link>
 
-        </section>
-    );
+          {userAuth === true && (
+            <Button
+              onClick={() => doUserLogOut()}
+              type="primary"
+              className={styles.form_button}
+              color={"#208AEC"}
+              size="small"
+            >
+              Log Out
+            </Button>
+          )}
+        </div>
+
+        {userAuth === false && (
+          <>
+            <h3 className={styles.user_title}>{"Вхід в аккаунт"}</h3>
+            <div className={styles.form_wrapper}>
+              <Input
+                value={username}
+                onChange={(event) => setUsername(event.target.value)}
+                placeholder="Username"
+                size="large"
+                className={styles.form_input}
+              />
+              <Input
+                value={password}
+                onChange={(event) => setPassword(event.target.value)}
+                placeholder="Password"
+                size="large"
+                type="password"
+                className={styles.form_input}
+              />
+
+              <Button
+                onClick={() => doUserLogIn()}
+                type="primary"
+                className={styles.form_button}
+                color={"#208AEC"}
+                size="large"
+                block
+              >
+                Log In
+              </Button>
+            </div>
+          </>
+        )}
+
+        {userAuth === true && (
+          <>
+            <h3 className={styles.user_title}>{`Доброго дня ${
+              Parse.User.current().attributes.username
+            }!`}</h3>
+
+            <div className={styles.user_block}>
+              <table className={styles.user_table}>
+                <tr>
+                  <td>Vip:</td>
+                  <td style={{ textAlign: "right" }}>{` ${
+                    Parse.User.current().attributes.Vip
+                      ? "Віп статус куплено"
+                      : "Віп не куплено"
+                  }`}</td>
+                </tr>
+                <tr>
+                  <td>Баланс:</td>
+                  <td style={{ textAlign: "right" }}>{` ${
+                    Parse.User.current().attributes.balance
+                  } коїнів`}</td>
+                </tr>
+              </table>
+            </div>
+          </>
+        )}
+        <Link className={styles.form_hint} to="/user-registration">
+          Не маєте аккаунта? <i>Зарєєструватися</i>
+        </Link>
+      </div>
+    </section>
+  );
 };

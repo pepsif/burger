@@ -1,12 +1,19 @@
 
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import {fetchBurgers} from "../../api/fetchBurgers.mjs"
 
-   //  --INITIAL-STATE--
+export const fetchBurgersArray = createAsyncThunk(
+  'burgers/fetchBurgers',
+  async function () {
+    return fetchBurgers()
+  }
+)
 
 const initialState = {
+  status: null,
+  error: null,
   activeBurgerId: 0,
-  data: await fetchBurgers(),
+  data: [],
 
 };
 
@@ -35,6 +42,20 @@ export const burgersSlice = createSlice({
     // console.log(jsonParse)
     }
   },
+  extraReducers: {
+    [fetchBurgersArray.pending]: (state,action) => {
+      state.status = 'loading';
+      state.error = null;
+    },
+    [fetchBurgersArray.fulfilled]: (state,action)=>{
+      state.status = 'resolved';
+      state.error = null;
+      state.data = action.payload;
+    },
+    [fetchBurgersArray.rejected]: (state,action)=>{
+      state.error = 'error';
+    },
+  }
 });
 
 export const { setActiveBurgerId, increaseBurgerValue, decreaseBurgerValue, deleteBurger } =
