@@ -1,12 +1,13 @@
 import "./Burger.scss";
 import React, { lazy } from "react";
 // import heart from "../../assets/icons/PikPng.com_restart-icon-png_3823370.png";
-import heartOutline from "../../assets/icons/pngwing.com (72).png";
+import heartOutline from "../../assets/icons/heart1.png";
 import {AiOutlinePlus, AiOutlineMinus} from "react-icons/ai";
 import {TiStar} from "react-icons/ti";
 import {Link} from "react-router-dom";
 
 import {useDispatch} from "react-redux";
+// import {burgerTest} from '../../assets/burger1new.webp';
 import {setActiveBurgerId, increaseBurgerValue, decreaseBurgerValue} from "../../redux/BurgersSlice/BurgersSlice";
 import {burgersCountIncrease, burgersCountDecrease} from "../../redux/CartSlice/CartSlice";
 
@@ -19,7 +20,7 @@ interface BurgerProps {
     background: string;
     imageUrl: string;
 }
-
+``
 export default function Burger({id, value, title, rating, price, background, imageUrl}: BurgerProps) {
     const dispatch = useDispatch();
     // const activeBurgerId = useSelector(state => state.burgers.activeBurgerId);
