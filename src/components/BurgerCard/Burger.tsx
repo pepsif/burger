@@ -1,7 +1,7 @@
 import "./Burger.scss";
 import React, { lazy } from "react";
 // import heart from "../../assets/icons/PikPng.com_restart-icon-png_3823370.png";
-import heartOutline from "../../assets/icons/heart1.png";
+import heartOutline from '../../assets/icons/heart1.png';
 import {AiOutlinePlus, AiOutlineMinus} from "react-icons/ai";
 import {TiStar} from "react-icons/ti";
 import {Link} from "react-router-dom";
@@ -19,6 +19,7 @@ interface BurgerProps {
     price: number;
     background: string;
     imageUrl: string;
+    
 }
 ``
 export default function Burger({id, value, title, rating, price, background, imageUrl}: BurgerProps) {

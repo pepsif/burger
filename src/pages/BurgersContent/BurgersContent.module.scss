@@ -48,3 +48,9 @@ overflow:scroll;
     }
 
 }
+
+@media (max-height: 1000px) {
+    .burger_section {
+        height: 70vh;
+    }
+}
