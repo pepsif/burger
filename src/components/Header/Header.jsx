@@ -18,6 +18,7 @@ export const Header = () => {
       <div className={"container" + " " + styles.header_container}>
         <FiMenu className={styles.fit_menu} onClick={() => menuOnOff()} />
         <span className={styles.header_title}>Home</span>
+
         <div className={styles.user_cart_block}>
           <Link to="cart">
             <div className={styles.cart_block}>

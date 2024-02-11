@@ -3,14 +3,14 @@
 background: url('../../assets/images/burger-delivery-fast-hamburger-car-cheeseburger-as-fast-food-car-mascot-burger-car-design-logotype_726113-2926.jpg');
 background-size: cover;
   border-radius: 40px;
-  padding: 14px;
+  padding: 20px 10px;
 
   .deliveryContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    height: 97vh;
+    min-height: 600px;
+    height: 92vh;
     backdrop-filter: blur(10px) ;
 
 

@@ -43,11 +43,38 @@ outline: 0;
 
 
 @media (min-width: 425px) {
-    .search_container {
-        //padding: 0 20px;
 
-    }
     .input {
         width: 70%;
     }
 }
+
+@media (min-width: 560px) {
+
+    .search_container {
+        padding: 10px 0;
+
+        .input {
+            font-size: 16px;
+            padding: 6px 20px !important;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+
+    .search_container {
+        min-width: 540px;
+
+        .input {
+            width: 80%;
+            padding: 6px 20px !important;
+            font-size: 16px;
+        }
+        .button {
+            height: 50px;
+            width: 50px;
+        }
+    }
+}
+

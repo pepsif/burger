@@ -10,7 +10,7 @@ export const fetchBurgersArray = createAsyncThunk(
 )
 
 const initialState = {
-  status: null,
+  status: "pending",
   error: null,
   activeBurgerId: 0,
   data: [],
@@ -42,20 +42,22 @@ export const burgersSlice = createSlice({
     // console.log(jsonParse)
     }
   },
-  extraReducers: {
-    [fetchBurgersArray.pending]: (state,action) => {
-      state.status = 'loading';
-      state.error = null;
-    },
-    [fetchBurgersArray.fulfilled]: (state,action)=>{
-      state.status = 'resolved';
-      state.error = null;
-      state.data = action.payload;
-    },
-    [fetchBurgersArray.rejected]: (state,action)=>{
-      state.error = 'error';
-    },
-  }
+  extraReducers: builder => {
+    builder
+     .addCase(fetchBurgersArray.pending, (state) => {
+       state.status = 'loading';
+       state.error = false;
+     })
+     .addCase(fetchBurgersArray.fulfilled, (state, action) => {
+        state.status = 'succeeded';
+        state.data = action.payload;
+        
+      })
+      .addCase(fetchBurgersArray.rejected, (state, action) => {
+        state.status = 'failed';
+        state.error = 'error';
+      });
+    }
 });
 
 export const { setActiveBurgerId, increaseBurgerValue, decreaseBurgerValue, deleteBurger } =

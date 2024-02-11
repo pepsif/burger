@@ -1,15 +1,20 @@
 .burger-card {
-    width: 120px;
-    height: 140px;
-    margin: 10px 4px;
-    border-radius: 20px;
-    position: relative;
-    color: black;
+  width: 120px;
+  height: 140px;
+  margin: 10px 4px;
+  border-radius: 20px;
+  position: relative;
+  color: black;
 
-   
-}
-
-.rating-block {
+  .burger-image {
+    width: 50%;
+    height: 40%;
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    transition: .5s;
+  }
+  .rating-block {
     display: flex;
     margin: 10px 10px;
     align-items: center;
@@ -20,45 +25,34 @@
     background-color: #fff;
     font-size: 14px;
     font-weight: 500;
-}
-.description-block {
-height: 60px;    
-margin-top: 42%;
-background-color: rgb(230, 230, 230);
-position: relative;
-
-}
-.burger-title-block {
-    width:100%;
-    font-size: 14px;
-    font-weight: 600;
-    padding: 6px;
-
-}
-.burger-price{
-    font-size: 12px;
-    font-weight:bold;
-}
-.burger-image {
-    width: 50%;
-    height: 40%;
- position: absolute;
- left: 20%;
- top: 20%;
-transition: .5s;
-}
-.burger-image:hover {
-    transform: scale(1.05);
-}
-.burger-heart {
+  }
+  .burger-heart {
     width: 20px;
     position: absolute;
     right: 8px;
     top: 6px;
     cursor: pointer;
-}
+  }
+  .description-block {
+    height: 60px;
+    margin-top: 42%;
+    background-color: rgb(255, 255, 255);
+    position: relative;
 
-.burger-counter-block {
+  }
+  .burger-title-block {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px;
+
+    .burger-price {
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+  }
+  .burger-counter-block {
     display: flex;
     align-items: center;
     position: absolute;
@@ -66,18 +60,49 @@ transition: .5s;
     bottom: 8px;
     font-size: 8px;
 
+    .burger-count {
+      font-size: 14px;
+      margin: 0 4px;
+      font-weight: 600;
+    }
+  }
 }
-.burger-count {
-    font-size: 14px;
-    margin: 0 4px;
-    font-weight: 600;
+
+
+.burger-image:hover {
+  transform: scale(1.05);
 }
 
 
 @media (min-width: 374px) {
 
-    .description-block {
-        margin-top: 47% ;
+  .description-block {
+    margin-top: 47%;
 
+  }
+}
+
+@media (min-width: 425px) {
+
+  .burger-card {
+    width: 150px;
+    height: 160px;
+
+    .description-block {
+      margin-top: 44%;
     }
+  }
+}
+
+@media (min-width: 560px) {
+
+  .burger-card {
+    margin: 10px;
+    width: 180px;
+    height: 180px;
+
+    .description-block {
+      margin-top: 48%;
+    }
+  }
 }

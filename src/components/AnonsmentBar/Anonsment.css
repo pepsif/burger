@@ -24,3 +24,24 @@
     transform: translate(-160%, 0);
   }
 }
+
+@media (min-width: 560px) {
+
+  .anonsment-text {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .anonsment {
+    padding: 10px 0;
+    
+    
+  }
+  .anonsment-container {
+    max-width: 600px !important;
+  }
+  .anonsment-text {
+    font-size: 20px;
+  }
+}

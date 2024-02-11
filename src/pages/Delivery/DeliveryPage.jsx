@@ -2,8 +2,11 @@ import styles from "./DeliveryPage.module.scss";
 import { IoIosArrowBack } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { Formik, Field, Form } from "formik";
+import {useEffect} from "react";
 
 export default function Delivery() {
+
+
   return (
     <div className={styles.deliverySection}>
       <div className={"container" + " " + styles.deliveryContainer}>

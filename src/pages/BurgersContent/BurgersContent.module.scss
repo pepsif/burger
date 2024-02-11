@@ -1,6 +1,6 @@
 .burger_section{
      margin: 0;
-     height: 320px;
+     //height: 320px;
      overflow-y: scroll;
     border-bottom: 2px solid #e6e6e6;
 }
@@ -17,7 +17,7 @@
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
-height: 420px;
+height: 70vh;
 overflow:scroll;
 }
 
@@ -27,30 +27,46 @@ overflow:scroll;
    
     }
 
-@media (min-width: 374px) {
-
+@media (max-height: 1000px) {
     .burger_section {
-        height: 360px;
-    }
-    .burger_card {
-        width: 140px;
-        height: 160px;
+        height: 70vh;
 
+        .burgers_cards {
+            height: 100%;
+
+        }
     }
 
 }
 
 @media (min-width: 768px) {
 
-    .burger_section{
-        height: 400px;
+  .burger_section{
+    //height: 400px;
+
+  }
+
+}
+
+@media (min-width: 560px) {
+
+    .burgers_container {
+       max-width: 500px !important;
 
     }
 
 }
+@media (min-width: 425px) {
 
-@media (max-height: 1000px) {
-    .burger_section {
-        height: 70vh;
-    }
+}
+@media (min-width: 374px) {
+
+  .burger_section {
+
+  }
+  .burger_card {
+
+
+  }
+
 }
