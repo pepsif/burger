@@ -1,5 +1,4 @@
 import styles from './Cart.module.scss';
-import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import CartReturnBlock from "./CartReturnBlock/CartReturnBlock";
 import CartItem from "./CartItem/CartItem";

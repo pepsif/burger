@@ -10,10 +10,11 @@ export async function fetchBurgers():Promise<BurgerDto[]> {
     Parse.initialize(PARSE_APPLICATION_ID, PARSE_JAVASCRIPT_KEY);
     Parse.serverURL = PARSE_HOST_URL;
 
+
+
     const fetchBurgers = new Parse.Query("Burgers");
     const response = await fetchBurgers.first();
     const fetchBurgersArray = await response?.get("data");
-
 
     return fetchBurgersArray
 }

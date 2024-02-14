@@ -1,4 +1,4 @@
-import { lazy, Suspense } from 'react'
+import {lazy, Suspense, useState} from 'react'
 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { AnonsmentBar } from "./components/AnonsmentBar/AnonsmentBar";
@@ -20,7 +20,10 @@ import { useSelector } from 'react-redux';
 // const DeliveryPage = lazy(()=>  import('./pages/Delivery/DeliveryPage'))
 
 function App() {
-  const menuOn = useSelector(state => state.menuOnOff.menuOn)
+  const menuOn = useSelector(state => state.menuOnOff.menuOn);
+
+
+// console.log( cartLocalStorage )
 
   return (
     <Router>

@@ -9,6 +9,7 @@ import { setOnOff } from "../../redux/MenuOnOffSlice/MenuOnOffSlice";
 export const Header = () => {
   const dispatch = useDispatch();
   const menuOn = useSelector((state) => state.menuOnOff.menuOn);
+  const burgersCounter = useSelector(state => state.burgers.burgersCount)
 
   const menuOnOff = () => {
     dispatch(setOnOff(!menuOn));
@@ -23,13 +24,14 @@ export const Header = () => {
           <Link to="cart">
             <div className={styles.cart_block}>
               <BsCart4 className={styles.header_cart} />
-              {localStorage.getItem("cart") ? (
+
                 <span className={styles.burgers_count}>
-                  {JSON.parse(localStorage.getItem("cart")).length}
+
+                  { burgersCounter }
+
                 </span>
-              ) : (
-                ""
-              )}
+
+
             </div>
           </Link>
           <Link className={styles.user_avatar} to="/user-login">

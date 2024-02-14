@@ -3,10 +3,10 @@ import "./CartItem.scss";
 import RemoveIcon from '@mui/icons-material/Remove';
 import AddIcon from '@mui/icons-material/Add';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
-import { useDispatch, useSelector } from "react-redux";
-import { burgersCountIncrease, burgersCountDecrease } from '../../../redux/CartSlice/CartSlice'
+import { useDispatch } from "react-redux";
+import { burgersCartCountIncrease, burgersCartCountDecrease } from '../../../redux/CartSlice/CartSlice'
 import { increaseBurgerValue, decreaseBurgerValue, deleteBurger } from '../../../redux/BurgersSlice/BurgersSlice';
-import { deleteBurgerCountReset } from "../../../redux/CartSlice/CartSlice";
+import { deleteBurgerCartCountReset } from "../../../redux/CartSlice/CartSlice";
 
 
 export default function CartItem( { id, title, value,  price, imageUrl  } ) {
@@ -15,15 +15,15 @@ export default function CartItem( { id, title, value,  price, imageUrl  } ) {
 
 const increaseBurger = () => {
   dispatch(increaseBurgerValue(id))
-  dispatch(burgersCountIncrease())
+  dispatch(burgersCartCountIncrease())
 }
 const decreaseBurger = () => {
 dispatch(decreaseBurgerValue(id))
-dispatch(burgersCountDecrease())
+dispatch(burgersCartCountDecrease())
 }
 const deletedBurger = () => {
 dispatch(deleteBurger(id))
-dispatch(deleteBurgerCountReset(value))
+dispatch(deleteBurgerCartCountReset(value))
 }
 
 

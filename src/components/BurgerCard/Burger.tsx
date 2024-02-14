@@ -1,6 +1,4 @@
 import "./Burger.scss";
-// import React, { lazy } from "react";
-// import heart from "../../assets/icons/PikPng.com_restart-icon-png_3823370.png";
 import heartOutline from '../../assets/icons/heart1.png';
 import {AiOutlinePlus, AiOutlineMinus} from "react-icons/ai";
 import {TiStar} from "react-icons/ti";
@@ -9,7 +7,7 @@ import {Link} from "react-router-dom";
 import {useDispatch} from "react-redux";
 // import {burgerTest} from '../../assets/burger1new.webp';
 import {setActiveBurgerId, increaseBurgerValue, decreaseBurgerValue} from "../../redux/BurgersSlice/BurgersSlice";
-import {burgersCountIncrease, burgersCountDecrease} from "../../redux/CartSlice/CartSlice";
+import {burgersCartCountIncrease, burgersCartCountDecrease} from "../../redux/CartSlice/CartSlice.ts";
 
 interface BurgerProps {
     id: number;
@@ -19,8 +17,7 @@ interface BurgerProps {
     price: number;
     background: string;
     imageUrl: string;
-    
-}
+    }
 
 export default function Burger({id, value, title, rating, price, background, imageUrl}: BurgerProps) {
     const dispatch = useDispatch();
@@ -46,14 +43,13 @@ export default function Burger({id, value, title, rating, price, background, ima
         }
     };
     const burgerAdd = () => {
-        dispatch(burgersCountIncrease())
         dispatch(increaseBurgerValue(id))
-
+        // dispatch(burgersCartCountIncrease())
     }
     const burgerDecrease = () => {
         if (value === 0) return
-        dispatch(burgersCountDecrease())
-        dispatch(decreaseBurgerValue(id))
+          dispatch(decreaseBurgerValue(id))
+        // dispatch(burgersCartCountDecrease())
     }
     return (
 
