@@ -5,6 +5,7 @@ import userSlice from "./UserSlice/UserSlice"
 import menuOnOff from './MenuOnOffSlice/MenuOnOffSlice'
 
 export const store = configureStore({
+    
  reducer: {
   burgers: BurgersSlice,
   cart: CartSlice,
@@ -12,6 +13,7 @@ export const store = configureStore({
   menuOnOff
  },
  devTools: true,
+ 
 })
 
 

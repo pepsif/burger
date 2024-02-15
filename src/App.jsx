@@ -1,4 +1,4 @@
-import {lazy, Suspense, useState} from 'react'
+import {lazy, Suspense, useEffect, useState} from 'react'
 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { AnonsmentBar } from "./components/AnonsmentBar/AnonsmentBar";
@@ -16,13 +16,17 @@ import {UserLogin} from "./pages/UserLogin/UserLogin.jsx";
 import { useSelector } from 'react-redux';
 
 
+
 // const BurgerPage = lazy(()=> import("./pages/Burger/BurgerPage"))
 // const DeliveryPage = lazy(()=>  import('./pages/Delivery/DeliveryPage'))
 
 function App() {
   const menuOn = useSelector(state => state.menuOnOff.menuOn);
 
-
+    // useEffect(() => {
+    //     if ( localStorage.getItem('burgers')  ) return;
+    //     fetchBurgersArray();
+    // } )
 // console.log( cartLocalStorage )
 
   return (
