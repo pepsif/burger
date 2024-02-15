@@ -18,7 +18,7 @@ interface BurgerProps {
     background: string;
     imageUrl: string;
     }
-
+console.log("test")
 export default function Burger({id, value, title, rating, price, background, imageUrl}: BurgerProps) {
     const dispatch = useDispatch();
     // const activeBurgerId = useSelector(state => state.burgers.activeBurgerId);
