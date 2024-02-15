@@ -22,7 +22,6 @@ export const UserLogin = () => {
   const [currentUser, setCurrentUser] = useState(userAuth);
 
 
-
   if (Parse.User.current() !== null) {
     dispatch(setUserAuth(true));
     

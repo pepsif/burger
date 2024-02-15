@@ -11,7 +11,7 @@ background-size: cover;
     align-items: center;
     min-height: 600px;
     height: 92vh;
-    backdrop-filter: blur(10px) ;
+    backdrop-filter: blur(20px) ;
 
 
     .title {
@@ -54,8 +54,9 @@ color:#f0b944;
         border-radius: 6px;
         border: none;
         background-color: rgba(255, 192, 2, 0.4);
-        color:rgb(0, 0, 0);
+        color:#f0b944;
         font-weight: bold;
+        letter-spacing: 2px;
         &:hover {
           background-color: rgba(189, 149, 18, 0.2);
         }
@@ -87,4 +88,14 @@ color:#f0b944;
     }
 
   }
+}
+
+@media screen and (min-width: 700px ) {
+  .deliverySection {
+
+    .deliveryContainer {
+      max-width: 500px;
+    }
+  }
+
 }

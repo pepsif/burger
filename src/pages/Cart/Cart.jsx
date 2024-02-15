@@ -16,7 +16,8 @@ export default function Cart() {
       <div className={'container'+' '+ styles.cart_container }>
         <CartReturnBlock />
         <div className={styles.cart_items_block}>
-          {localStorage.getItem("cart") &&
+          {
+            localStorage.getItem("cart") &&
           JSON.parse(localStorage.getItem("cart")).length > 0 ? (
             JSON.parse(localStorage.getItem("cart")).map((el, i) => {
               return <CartItem {...el} key={i} />;
