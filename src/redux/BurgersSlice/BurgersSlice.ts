@@ -45,7 +45,7 @@ export const burgersSlice = createSlice({
     deleteBurger: ( state, action ) => {
       // state.data[action.payload].value = 0;
 alert('delete')
-      // localStorage.setItem('cart',JSON.stringify(state.data.filter( el => el.value > 0 )));
+    
     
     }
   },
@@ -57,12 +57,9 @@ alert('delete')
      })
      .addCase(fetchBurgersArray.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        if(localStorage.getItem('burgers')) {
-            state.data = JSON.parse( localStorage.getItem('burgers') )
-            return
-        }
-        state.data = action.payload;
-        localStorage.setItem('burgers',JSON.stringify(action.payload) )
+        
+            state.data = action.payload;
+      
       })
       .addCase(fetchBurgersArray.rejected, (state, action) => {
         state.status = 'failed';

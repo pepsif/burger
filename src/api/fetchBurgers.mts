@@ -14,7 +14,7 @@ export async function fetchBurgers():Promise<BurgerDto[]> {
 
     const fetchBurgers = new Parse.Query("Burgers");
     const response = await fetchBurgers.first();
-    const fetchBurgersArray = await response?.get("data");
+    const fetchBurgersArray = await response?.get("burgers");
 
     return fetchBurgersArray
 }

@@ -15,7 +15,7 @@ export default function BurgersContent() {
     if (burgers.length > 0) return;
     dispatch(fetchBurgersArray());
 
-  } );
+  },[] );
 
   return (
     <section className={styles.burger_section}>
