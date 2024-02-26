@@ -25,13 +25,8 @@ export const burgersSlice = createSlice({
       state.activeBurgerId = action.payload;
     },
     increaseBurgerValue: (state, action) => {
-     
-      state.data[action.payload].value += 1;
-        // localStorage.setItem('cart',JSON.stringify(state.data.filter( el =>el.value > 0 )));
-        localStorage.setItem('burgers',JSON.stringify(state.data));
-
-
-        state.burgersCount = JSON.parse( localStorage.getItem('burgers')).map((item)=>item.value).reduce((accum,item) => accum+item);
+           state.data[action.payload].value += 1;
+             state.burgersCount = JSON.parse( localStorage.getItem('burgers')).map((item)=>item.value).reduce((accum,item) => accum+item);
     },
     decreaseBurgerValue: (state, action) => {
       
