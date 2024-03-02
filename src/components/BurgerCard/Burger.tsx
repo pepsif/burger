@@ -19,12 +19,13 @@ interface BurgerProps {
     imageUrl: string;
     }
 console.log("test")
-export default function Burger({id, value, title, rating, price, background, imageUrl}: BurgerProps) {
+export default function Burger({id, value, title, rating, price, compound, info, gradient, imageUrl}: BurgerProps) {
     const dispatch = useDispatch();
     // const activeBurgerId = useSelector(state => state.burgers.activeBurgerId);
+console.log(compound)
 
     const style = {
-        background: background,
+        background: gradient,
 
         star: {
             color: "#f7bd44",
@@ -67,6 +68,7 @@ export default function Burger({id, value, title, rating, price, background, ima
             <div className="description-block d-flex align-center">
                 <div className="burger-title-block">
                     {title} <br></br>
+
                     <span className="burger-price">₴ {price}</span>
                 </div>
 

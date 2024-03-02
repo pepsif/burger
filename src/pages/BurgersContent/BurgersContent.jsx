@@ -20,9 +20,10 @@ export default function BurgersContent() {
     <section className={styles.burger_section}>
       <div className={"container" + " " + styles.burgers_container}>
         <div className={styles.burgers_cards}>
+
           {burgersIsFetch === "loading" ? <p>LOADING...</p> : ""}
-          { burgers ? burgers.map((el, i) => {
-            return <Burger {...burgers[i]} key={i} />;
+          {burgers ? burgers.map((el, i) => {
+            return <Burger {...burgers[i]} key={i}/>;
           }) : <p>нажаль бургерів зараз немає</p>
           }
         </div>
