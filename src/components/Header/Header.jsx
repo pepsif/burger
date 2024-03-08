@@ -5,12 +5,12 @@ import { BsCart4 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setOnOff } from "../../redux/MenuOnOffSlice/MenuOnOffSlice";
+import {useEffect} from "react";
 
 export const Header = () => {
   const dispatch = useDispatch();
   const menuOn = useSelector((state) => state.menuOnOff.menuOn);
   const burgersCounter = useSelector(state => state.cart.burgersCount)
-
 
 
   const menuOnOff = () => {

@@ -16,7 +16,7 @@ export const CartSLice = createSlice({
      state.burgersCount <=0 ? "" : state.burgersCount -=1;
     },
     deleteBurgerCartCountReset: (state, actions) => {
-
+     
     },
   },
 });

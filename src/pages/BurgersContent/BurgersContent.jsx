@@ -13,7 +13,6 @@ export default function BurgersContent() {
   useEffect(() => {
    burgers.length > 0 ? "" : dispatch(fetchBurgersArray())
 
-
   },[] );
 
   return (

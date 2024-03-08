@@ -4,11 +4,12 @@ import CartReturnBlock from "./CartReturnBlock/CartReturnBlock";
 import CartItem from "./CartItem/CartItem";
 import CartTotalSumBlock from "./CartTotalSumBlock/CartTotalSumBlock";
 import Button from "@mui/material/Button";
+import {useEffect} from "react";
 
 export default function Cart() {
   const burgers = useSelector((state) => state.burgers.data);
-
   const result = burgers.filter((el) => el.value > 0);
+
 
 
   return (
