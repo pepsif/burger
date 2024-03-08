@@ -16,16 +16,15 @@ export default function BurgerPage() {
   useEffect(() => {
     const root = document.querySelector("#root");
     root.style.backgroundColor = "#f0b944";
-   
-    
+
     return () => {root.style.backgroundColor = "white";};
   });
 
   return (
     
-    <div className={styles.burger_container + " " + "container"}>
-    { console.log(burger,activeBurgerId) }
-      <div style={{ background: burger.background, borderRadius: "8% 8% 0% 0% / 10% 10% 10% 10% ", }} >
+    <div className={styles.burger_container + " " + "container"} style={{ background: burger.gradient, borderRadius: "8% 8% 0% 0% / 10% 10% 10% 10% ", }}>
+    {/*{ console.log(burger.gradient) }*/}
+      <div style={{ background: burger.gradient, borderRadius: "8% 8% 0% 0% / 10% 10% 10% 10% ", }} >
               
         <ReturnBlock />
         <ImageBlock />

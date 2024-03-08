@@ -4,10 +4,12 @@ import {IoIosArrowBack} from "react-icons/io";
 
 import heartOutline from "../../../assets/icons/pngegg.png";
 
+
 export default function ReturnBlock() {
-  
+
+
     return(
-        <div className={styles.return_block}>
+        <div className={styles.return_block }>
             <Link to="/">
                 <IoIosArrowBack />
             </Link>

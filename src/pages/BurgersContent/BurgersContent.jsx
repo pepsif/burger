@@ -11,8 +11,8 @@ export default function BurgersContent() {
   const dispatch = useDispatch();
 
   useEffect(() => {
+   burgers.length > 0 ? "" : dispatch(fetchBurgersArray())
 
-    dispatch(fetchBurgersArray());
 
   },[] );
 

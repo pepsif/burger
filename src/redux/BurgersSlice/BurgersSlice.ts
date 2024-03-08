@@ -30,6 +30,7 @@ export const burgersSlice = createSlice({
 
     },
     decreaseBurgerValue: (state, action) => {
+        state.data[action.payload].value <= 0 ? '' : state.data[action.payload].value -= 1
 
     },
     deleteBurger: ( state, action ) => {

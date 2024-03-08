@@ -14,15 +14,17 @@ interface BurgerProps {
     value: number;
     title: string;
     rating: number;
+    info: string;
+    compound: [];
     price: number;
-    background: string;
+    gradient: string;
     imageUrl: string;
     }
 console.log("test")
 export default function Burger({id, value, title, rating, price, compound, info, gradient, imageUrl}: BurgerProps) {
     const dispatch = useDispatch();
     // const activeBurgerId = useSelector(state => state.burgers.activeBurgerId);
-console.log(compound)
+
 
     const style = {
         background: gradient,
@@ -45,12 +47,12 @@ console.log(compound)
     };
     const burgerAdd = () => {
         dispatch(increaseBurgerValue(id))
-        // dispatch(burgersCartCountIncrease())
+        dispatch(burgersCartCountIncrease())
     }
     const burgerDecrease = () => {
         if (value === 0) return
           dispatch(decreaseBurgerValue(id))
-        // dispatch(burgersCartCountDecrease())
+        dispatch(burgersCartCountDecrease())
     }
     return (
 

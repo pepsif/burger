@@ -9,8 +9,10 @@ import { setOnOff } from "../../redux/MenuOnOffSlice/MenuOnOffSlice";
 export const Header = () => {
   const dispatch = useDispatch();
   const menuOn = useSelector((state) => state.menuOnOff.menuOn);
-  const burgersCounter = useSelector(state => state.burgers.burgersCount)
+  const burgersCounter = useSelector(state => state.cart.burgersCount)
 
+
+  console.log(burgersCounter)
   const menuOnOff = () => {
     dispatch(setOnOff(!menuOn));
   };
