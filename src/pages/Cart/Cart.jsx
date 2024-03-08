@@ -17,14 +17,13 @@ export default function Cart() {
         <CartReturnBlock />
         <div className={styles.cart_items_block}>
           {
-            localStorage.getItem("cart") &&
-          JSON.parse(localStorage.getItem("cart")).length > 0 ? (
-            JSON.parse(localStorage.getItem("cart")).map((el, i) => {
+            result ? (
+            result.map((el, i) => {
               return <CartItem {...el} key={i} />;
             })
-          ) : (
+          ) :
             <p>На жаль ви нічого не купили</p>
-          )}
+          }
         </div>
 
         <CartTotalSumBlock />
