@@ -14,7 +14,7 @@ const initialState = {
   error: null,
   activeBurgerId: 0,
   data: [],
-  burgersCount: 0,
+
 };
 
 export const burgersSlice = createSlice({
@@ -34,9 +34,7 @@ export const burgersSlice = createSlice({
 
     },
     deleteBurger: ( state, action ) => {
-      // state.data[action.payload].value = 0;
-alert('delete')
-
+      state.data[action.payload].value = 0;
     
     }
   },

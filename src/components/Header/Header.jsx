@@ -12,7 +12,7 @@ export const Header = () => {
   const burgersCounter = useSelector(state => state.cart.burgersCount)
 
 
-  console.log(burgersCounter)
+
   const menuOnOff = () => {
     dispatch(setOnOff(!menuOn));
   };

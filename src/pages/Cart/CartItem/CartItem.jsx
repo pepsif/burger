@@ -23,7 +23,7 @@ dispatch(burgersCartCountDecrease())
 }
 const deletedBurger = () => {
 dispatch(deleteBurger(id))
-dispatch(deleteBurgerCartCountReset(value))
+
 }
 
 
