@@ -9,9 +9,16 @@ import ButtonBlock from "../../components/ButtonBlock/ButtonBlock";
 import React, { useEffect } from "react";
 
 export default function BurgerPage() {
+    const localBurgerId = localStorage.getItem('burgerId');
   const activeBurgerId = useSelector((state) => state.burgers.activeBurgerId);
   const burger = useSelector((state) => state.burgers.data[activeBurgerId]);
 
+
+  console.log(activeBurgerId, localBurgerId,burger.gradient)
+const burgerStyles = {
+    background: burger.gradient,
+    borderRadius: "8% 8% 0% 0% / 10% 10% 10% 10% ",
+}
 
   useEffect(() => {
     const root = document.querySelector("#root");
@@ -22,9 +29,9 @@ export default function BurgerPage() {
 
   return (
     
-    <div className={styles.burger_container + " " + "container"} style={{ background: burger.gradient, borderRadius: "8% 8% 0% 0% / 10% 10% 10% 10% ", }}>
-    {/*{ console.log(burger.gradient) }*/}
-      <div style={{ background: burger.gradient, borderRadius: "8% 8% 0% 0% / 10% 10% 10% 10% ", }} >
+    <div className={styles.burger_container + " " + "container"} style={burgerStyles}>
+
+      <div style={burgerStyles} >
               
         <ReturnBlock />
         <ImageBlock />

@@ -100,7 +100,7 @@ export const UserLogin = () => {
             </div>
           </Link>
 
-          {userAuth === true && (
+          {userAuth === true &&
             <Button
               onClick={() => doUserLogOut()}
               type="primary"
@@ -110,7 +110,7 @@ export const UserLogin = () => {
             >
               Log Out
             </Button>
-          )}
+          }
         </div>
 
         {userAuth === false && (

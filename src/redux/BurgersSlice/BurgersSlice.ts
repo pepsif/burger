@@ -22,7 +22,9 @@ export const burgersSlice = createSlice({
   initialState,
   reducers: {
     setActiveBurgerId: (state, action) => {
-      state.activeBurgerId = action.payload;
+        localStorage.setItem('burgerId',action.payload)
+      state.activeBurgerId = localStorage.getItem('burgerId');
+
     },
     increaseBurgerValue: (state, action) => {
      
@@ -35,7 +37,7 @@ export const burgersSlice = createSlice({
     },
     deleteBurger: ( state, action ) => {
       state.data[action.payload].value = 0;
-    
+
     }
   },
   extraReducers: builder => {
