@@ -16,7 +16,7 @@ export default function CourierDelivery() {
                         <LunchDiningOutlinedIcon
                             className={styles.customBurgerImage + " " + " animate__animated animate__headShake animate__infinite animate__slower"}/>
                         <LunchDiningOutlinedIcon
-                            className={styles.customBurgerImage + " " + "animate__animated animate__pulse animate__infinite animate__slow"}/>
+                            className={styles.customBurgerImage + " " + "animate__animated animate__pulse animate__infinite animate__slow animate__delay-0.5s"}/>
                     </div>
                     <p className={styles.deliveryButtonSlogan}>Замовити Доставку!!!</p>
                 </Link>
