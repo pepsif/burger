@@ -1,6 +1,6 @@
 .burger-card {
-  width: 120px;
-  height: 140px;
+  width: 150px;
+  height: 150px;
   margin: 10px 4px;
   border-radius: 20px;
   position: relative;
@@ -75,6 +75,12 @@
   transform: scale(1.05);
 }
 
+@media (min-width: 330px) {
+  .burger-card {
+    width: 140px;
+    height: 148px;
+  }
+}
 
 @media (min-width: 374px) {
 
