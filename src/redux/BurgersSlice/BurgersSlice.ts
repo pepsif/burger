@@ -48,8 +48,9 @@ export const burgersSlice = createSlice({
      })
      .addCase(fetchBurgersArray.fulfilled, (state, action) => {
         state.status = 'succeeded';
-
-            state.data = action.payload;
+        //state.data = action.payload
+        localStorage.getItem('burgersArray') ? state.data = JSON.parse(localStorage.getItem('burgersArray')) : null;
+        
 
       })
       .addCase(fetchBurgersArray.rejected, (state, action) => {

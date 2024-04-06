@@ -24,7 +24,7 @@ interface BurgerProps {
 export default function Burger({id, value, title, rating, price, compound, info, gradient, imageUrl}: BurgerProps) {
     const dispatch = useDispatch();
     // const activeBurgerId = useSelector(state => state.burgers.activeBurgerId);
-
+   const localBurgerId = localStorage.setItem('burgerId',JSON.stringify(id));
 
     const style = {
         background: gradient,

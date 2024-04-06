@@ -9,14 +9,14 @@ import ButtonBlock from "../../components/ButtonBlock/ButtonBlock";
 import React, { useEffect } from "react";
 
 export default function BurgerPage() {
-    const localBurgerId = localStorage.getItem('burgerId');
-  const activeBurgerId = useSelector((state) => state.burgers.activeBurgerId);
-  const burger = useSelector((state) => state.burgers.data[activeBurgerId]);
+    const localBurgerId = JSON.parse(localStorage.getItem('burgerId')) ;
+  // const activeBurgerId = useSelector((state) => state.burgers.activeBurgerId);
+  // const burger = useSelector((state) => state.burgers.data[localBurgerId]);
+  const localBurger = JSON.parse(localStorage.getItem('burgersArray'))[localBurgerId]
 
-
-  console.log(activeBurgerId, localBurgerId,burger.gradient)
+  console.log(localBurger)
 const burgerStyles = {
-    background: burger.gradient,
+    background: localBurger.gradient,
     borderRadius: "8% 8% 0% 0% / 10% 10% 10% 10% ",
 }
 

@@ -5,7 +5,8 @@ import {useSelector} from "react-redux";
 export default function QuantityBlock(){
     const burgers = useSelector(state => state.burgers.data)
     const activeBurgerId = useSelector((state) => state.burgers.activeBurgerId);
-
+    const localBurgerId = JSON.parse(localStorage.getItem('burgerId'));
+    const localBurger = JSON.parse(localStorage.getItem('burgersArray'))[localBurgerId]
 
     const style = {
         image_block: {
@@ -33,7 +34,7 @@ export default function QuantityBlock(){
             <span className={styles.quantity}>Кількість у Кошику</span>
             <div className={styles.values_block}>
                 <AiOutlineMinus style={style.quantity.minus}/>
-                <span className={styles.value}>{burgers[activeBurgerId].value}</span>
+                <span className={styles.value}>{localBurger.value}</span>
                 <AiOutlinePlus style={style.quantity.plus}/>
             </div>
 
