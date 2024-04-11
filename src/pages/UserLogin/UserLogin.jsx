@@ -166,7 +166,7 @@ export const UserLogin = () => {
                 <tr>
                   <td>Баланс:</td>
                   <td style={{ textAlign: "right" }}>{` ${
-                    Parse.User.current().attributes.balance
+                    Parse.User.current().attributes.tokens
                   } коїнів`}</td>
                 </tr>
               </table>
