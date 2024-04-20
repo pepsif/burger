@@ -56,6 +56,8 @@ export const burgersSlice = createSlice({
       .addCase(fetchBurgersArray.rejected, (state, action) => {
         state.status = 'failed';
         state.error = 'error';
+        localStorage.getItem('burgersArray') ? state.data = JSON.parse(localStorage.getItem('burgersArray')) : localStorage.setItem('burgersArray',JSON.stringify(action.payload));
+        
       });
     }
 });

@@ -108,7 +108,7 @@ export const UserLogin = () => {
               color={"#208AEC"}
               size="small"
             >
-              Log Out
+              Вийти
             </Button>
           }
         </div>
@@ -173,9 +173,9 @@ export const UserLogin = () => {
             </div>
           </>
         )}
-        <Link className={styles.form_hint} to="/user-registration">
+        {/* <Link className={styles.form_hint} to="/user-registration">
           Не маєте аккаунта? <i>Зарєєструватися</i>
-        </Link>
+        </Link> */}
       </div>
     </section>
   );
