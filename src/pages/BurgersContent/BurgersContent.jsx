@@ -21,9 +21,10 @@ export default function BurgersContent() {
         <div className={styles.burgers_cards}>
 
           {burgersIsFetch === "loading" ? <p>LOADING...</p> : ""}
+          {burgersIsFetch === "failed" ? <p>Нажаль сервіс зараз недоступний,спробуйте трохи пізніше (</p> : ""}
           {burgers ? burgers.map((el, i) => {
             return <Burger {...burgers[i]} key={i}/>;
-          }) : <p>нажаль бургерів зараз немає</p>
+          }) : <p>нажаль бургерів зараз немає</p> 
           }
         </div>
       </div>
