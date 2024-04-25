@@ -1,7 +1,7 @@
 import styles from "./BurgersContent.module.scss";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchBurgersArray } from "../../redux/BurgersSlice/BurgersSlice";
+import { fetchBurgersArray,setBurgersArray } from "../../redux/BurgersSlice/BurgersSlice";
 import Burger from "../../components/BurgerCard/Burger.tsx";
 
 export default function BurgersContent() {
@@ -11,7 +11,8 @@ export default function BurgersContent() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-   burgers.length > 0 ? "" : dispatch(fetchBurgersArray())
+
+   localStorage.getItem('burgersArray') ? dispatch(setBurgersArray(JSON.parse(localStorage.getItem('burgersArray'))))  : dispatch(fetchBurgersArray())
 
   },[] );
 

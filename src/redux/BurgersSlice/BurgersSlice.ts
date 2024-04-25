@@ -21,6 +21,10 @@ export const burgersSlice = createSlice({
   name: "burgers",
   initialState,
   reducers: {
+      setBurgersArray:(state, action) => {
+       state.data = action.payload;
+          console.log(typeof action.payload)
+      },
     setActiveBurgerId: (state, action) => {
         localStorage.setItem('burgerId',action.payload)
       state.activeBurgerId = localStorage.getItem('burgerId');
@@ -62,6 +66,6 @@ export const burgersSlice = createSlice({
     }
 });
 
-export const { setActiveBurgerId, increaseBurgerValue, decreaseBurgerValue, deleteBurger } =
+export const { setActiveBurgerId, setBurgersArray,increaseBurgerValue, decreaseBurgerValue, deleteBurger } =
   burgersSlice.actions;
 export default burgersSlice.reducer;
