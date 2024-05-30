@@ -6,7 +6,7 @@ import QuantityBlock from "./QuantityBlock/QuantityBlock";
 import ImageBlock from "./ImageBlock/Image.block";
 import DescriptionBlock from "../../components/DescriptionBlock/DescriptionBlock";
 import ButtonBlock from "../../components/ButtonBlock/ButtonBlock";
-import React, { useEffect } from "react";
+import  { useEffect } from "react";
 
 export default function BurgerPage() {
     const localBurgerId = JSON.parse(localStorage.getItem('burgerId')) ;
