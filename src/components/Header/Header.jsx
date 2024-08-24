@@ -5,7 +5,7 @@ import { BsCart4 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setOnOff } from "../../redux/MenuOnOffSlice/MenuOnOffSlice";
-import {useEffect} from "react";
+
 
 export const Header = () => {
   const dispatch = useDispatch();
@@ -15,10 +15,11 @@ export const Header = () => {
 
   const menuOnOff = () => {
     dispatch(setOnOff(!menuOn));
+
   };
-  
+
   return (
-    <header className={styles.header}>
+    <header className="">
       <div className={"container" + " " + styles.header_container}>
         <FiMenu className={styles.fit_menu} onClick={() => menuOnOff()} />
         <span className={styles.header_title}>Home</span>
@@ -29,11 +30,8 @@ export const Header = () => {
               <BsCart4 className={styles.header_cart} />
 
                 <span className={styles.burgers_count}>
-
                   { burgersCounter }
-
                 </span>
-
 
             </div>
           </Link>

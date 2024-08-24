@@ -23,7 +23,7 @@ export const burgersSlice = createSlice({
   reducers: {
       setBurgersArray:(state, action) => {
        state.data = action.payload;
-          console.log(typeof action.payload)
+          // console.log(typeof action.payload)
       },
     setActiveBurgerId: (state, action) => {
         localStorage.setItem('burgerId',action.payload)
