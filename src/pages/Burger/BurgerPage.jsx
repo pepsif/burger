@@ -30,7 +30,6 @@ const burgerStyles = {
     
     <div className={styles.burger_container + " " + "container"} style={burgerStyles}>
 
-
       <div style={burgerStyles} >
               
         <ReturnBlock />
