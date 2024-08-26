@@ -1,6 +1,6 @@
-import {lazy, Suspense, useEffect, useState} from 'react'
+// import {lazy, Suspense, useEffect, useState} from 'react'
 
-import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {AnonsmentBar} from "./components/AnonsmentBar/AnonsmentBar";
 import {Header} from "./components/Header/Header";
 import {Search} from "./components/Search/Search";
@@ -44,7 +44,7 @@ function App() {
                 <Route path="delivery" element={<DeliveryPage/>}/>
                 <Route path="user-registration" element={<UserRegistration/>}/>
                 <Route path="user-login" element={<UserLogin/>}/>
-                <Route path="about" element={<About/>}/>
+                {/*<Route path="about" element={ <About/> }/>*/}
 
             </Routes>
         </Router>
