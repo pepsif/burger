@@ -14,7 +14,6 @@ export const Menu = () => {
   return (
     <div className={styles.menu}>
 
-
        <div className={"container" + " " + styles.menu_container}>
          <KeyboardReturnIcon className={styles.return_button} onClick={() => resetMenuOn()}/>
 
