@@ -1,8 +1,7 @@
 import "./Anonsment.css";
-import React from "react";
 
 
-export const AnonsmentBar:React.FC = () => {
+export const AnonsmentBar = () => {
   return (
     <section className="anonsment">
       <div className="container anonsment-container d-flex">
