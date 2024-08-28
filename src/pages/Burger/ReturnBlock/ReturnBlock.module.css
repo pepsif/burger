@@ -7,6 +7,10 @@
 
 }
 .return_button {
+  width: 20px;
+  background-color: white;
+  padding: 4px;
+  border-radius: 10px;
 }
 .heart_image {
   width: 16px;
