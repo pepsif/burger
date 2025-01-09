@@ -1,7 +1,7 @@
 .burger_section{
      margin: 0;
      //height: 320px;
-     overflow-y: scroll;
+     //overflow-y: scroll;
     border-bottom: 2px solid #e6e6e6;
 }
 .burger_section::-webkit-scrollbar {
@@ -29,7 +29,7 @@ overflow:scroll;
 
 @media (max-height: 1000px) {
     .burger_section {
-        height: 70vh;
+        //height: 70vh;
 
         .burgers_cards {
             height: 100%;

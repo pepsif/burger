@@ -1,5 +1,5 @@
 import Parse from "parse/dist/parse.min.js";
-import {keys }from "./_key.js"
+import { keys }from "./_key.js"
 import {BurgerDto} from "../types/burgerDto.mts";
 
 export async function fetchBurgers():Promise<BurgerDto[]> {

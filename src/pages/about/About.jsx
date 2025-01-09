@@ -2,6 +2,7 @@ import {Header} from "../../components/Header/Header.jsx";
 import {AnonsmentBar} from "../../components/AnonsmentBar/AnonsmentBar.tsx";
 import {Menu} from "../Menu/Menu.jsx";
 import {useSelector} from "react-redux";
+import { AboutContent } from "./AboutContent.jsx";
 
 
 export const About = () => {
@@ -10,8 +11,10 @@ export const About = () => {
     return (
         <>
             <Header/>
-            <AnonsmentBar/>
+            
+            {/* <AnonsmentBar/> */}
             {menuOn && <Menu/>}
+            <AboutContent />
         </>
     )
 }

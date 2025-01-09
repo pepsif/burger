@@ -16,7 +16,6 @@ import {UserLogin} from "./pages/UserLogin/UserLogin.jsx";
 import {useSelector} from 'react-redux';
 import {About} from "./pages/about/About.jsx";
 
-
 // const BurgerPage = lazy(()=> import("./pages/Burger/BurgerPage"))
 // const DeliveryPage = lazy(()=>  import('./pages/Delivery/DeliveryPage'))
 

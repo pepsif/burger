@@ -29,9 +29,15 @@ background-size: cover;
       justify-content: space-between;
 
       .deliveryReturnButton {
+        width: 24px;
+          height: 24px;
+        display: block;
+        
         background-color: #f0b944;
         border-radius: 10px;
         padding: 6px;
+
+        
       }
 
       .delivery-return-title {
@@ -50,11 +56,12 @@ color:#f0b944;
 
       .textInput {
         margin-bottom: 12px;
-        padding: 4px 6px;
+        padding: 8px 6px;
         border-radius: 6px;
         border: none;
         background-color: rgba(255, 192, 2, 0.4);
         color:#f0b944;
+        font-size: 18px;
         font-weight: bold;
         letter-spacing: 2px;
         &:hover {

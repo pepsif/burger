@@ -1,0 +1,86 @@
+.deliverySection {
+  background: url("../../assets/images/burger-delivery-fast-hamburger-car-cheeseburger-as-fast-food-car-mascot-burger-car-design-logotype_726113-2926.jpg");
+  background-size: cover;
+  border-radius: 40px;
+  padding: 20px 10px;
+}
+.deliverySection .deliveryContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 600px;
+  height: 92vh;
+  backdrop-filter: blur(20px);
+}
+.deliverySection .deliveryContainer .title {
+  text-align: center;
+  margin: 10px 0;
+  color: #f0b944;
+  font-size: 18px;
+}
+.deliverySection .deliveryContainer .deliveryReturnBlock {
+  width: 90%;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.deliverySection .deliveryContainer .deliveryReturnBlock .deliveryReturnButton {
+  width: 24px;
+  height: 24px;
+  display: block;
+  background-color: #f0b944;
+  border-radius: 10px;
+  padding: 6px;
+}
+.deliverySection .deliveryContainer .deliveryReturnBlock .delivery-return-title {
+  font-size: 14px;
+}
+.deliverySection .deliveryContainer .boxForm {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 40px;
+  flex: 1;
+  color: #f0b944;
+  align-items: center;
+}
+.deliverySection .deliveryContainer .boxForm .textInput {
+  margin-bottom: 12px;
+  padding: 8px 6px;
+  border-radius: 6px;
+  border: none;
+  background-color: rgba(255, 192, 2, 0.4);
+  color: #f0b944;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.deliverySection .deliveryContainer .boxForm .textInput:hover {
+  background-color: rgba(189, 149, 18, 0.2);
+}
+.deliverySection .deliveryContainer .boxForm .textInput:focus-visible {
+  border: 1px solid white;
+  outline: none;
+}
+.deliverySection .deliveryContainer .deliverySubmit {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 40px;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f0b944;
+  color: black;
+}
+.deliverySection .deliveryContainer .deliveryPrice {
+  color: #f0b944;
+}
+.deliverySection .deliveryContainer .totalDeliveryPrice {
+  color: #f0b944;
+}
+
+@media screen and (min-width: 700px) {
+  .deliverySection .deliveryContainer {
+    max-width: 500px;
+  }
+}/*# sourceMappingURL=DeliveryPage.module.css.map */
