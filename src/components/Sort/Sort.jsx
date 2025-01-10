@@ -1,19 +1,94 @@
-import styles from './Sort.module.scss'
+import * as React from "react";
+import styles from "./Sort.module.scss";
+import { useSelector } from "react-redux";
+
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Box from "@mui/material/Box";
+
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
 
 export default function Sort() {
-    return(
+    const menuOn = useSelector((state) => state.sort.burgers);
+
+    const [value, setValue] = React.useState(0); // Стан для Tabs
+    const [price, setPrice] = React.useState(1); // Стан для Select (популярні)
+
+    // Обробка зміни для Tabs
+    const handleTabsChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
+    // Обробка зміни для Select
+    const handleSelectChange = (event) => {
+        setPrice(event.target.value);
+    };
+
+    console.log(menuOn);
+
+    return (
         <section className={styles.sort_section}>
-           <div className={"container"+" "+ styles.sort_container }>
-            <span className={styles.sort_title}>Гамбургери</span>
-               <span className={styles.sort_title}>Кава</span>
-               <span className={styles.sort_title}>Напої</span>
-            <select>
-            <option>Всі</option>
-              <option>по Ціні: від меньшої до більшої</option>
-              <option>по Ціні: від більшої до низької  </option>
-              <option>по Рейтингу</option>
-            </select>
-           </div>
+            <div className={styles.sort_container}>
+                <Box sx={{ width: "100%", bgcolor: "#f5f5f5" }}>
+                    <Tabs
+                        value={value}
+                        onChange={handleTabsChange} // Обробник для Tabs
+                        textColor="inherit"
+                        TabIndicatorProps={{
+                            style: {
+                                backgroundColor: "#000000", // Колір індикатора
+                            },
+                        }}
+                        sx={{
+                            "& .MuiTabs-flexContainer": {
+                                justifyContent: "space-around", // Розподіл табів із проміжками
+                            },
+                        }}
+                    >
+                        <Tab
+                            className={styles.sort_title}
+                            label="Гамбургери"
+                            sx={{ padding: "0" }}
+                        />
+                        <Tab
+                            className={styles.sort_title}
+                            label="Кава"
+                            sx={{ padding: "0" }}
+                        />
+                        <Tab
+                            className={styles.sort_title}
+                            label="Напої"
+                            sx={{ padding: "0" }}
+                        />
+
+                        <FormControl sx={{ minWidth: "100px" }}>
+                            <Select
+                                labelId="price-filter"
+                                id="price-filter"
+                                value={price} // Прив'язка до стану Select
+                                onChange={handleSelectChange} // Обробник для Select
+                                sx={{
+                                    "& .MuiOutlinedInput-notchedOutline": {
+                                        border: "none", // Прибирає бордер
+                                    },
+                                    "&:hover .MuiOutlinedInput-notchedOutline": {
+                                        border: "none", // Бордер при ховері
+                                    },
+                                    "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                                        border: "none", // Бордер при фокусі
+                                    },
+                                }}
+                            >
+                                <MenuItem value={1}>Популярні</MenuItem>
+                                <MenuItem value={2}>Від найнижчої</MenuItem>
+                                <MenuItem value={3}>Від найбільшої</MenuItem>
+                            </Select>
+                        </FormControl>
+                    </Tabs>
+                </Box>
+            </div>
         </section>
-    )
+    );
 }

@@ -1,8 +1,9 @@
-import { configureStore} from "@reduxjs/toolkit";
+import { configureStore} from "@reduxjs/toolkit"
 import  BurgersSlice  from "./BurgersSlice/BurgersSlice"
 import CartSlice from "./CartSlice/CartSlice"
 import userSlice from "./UserSlice/UserSlice"
 import menuOnOff from './MenuOnOffSlice/MenuOnOffSlice'
+import sortSlice from './Sort/Sort'
 
 export const store = configureStore({
     
@@ -10,7 +11,9 @@ export const store = configureStore({
   burgers: BurgersSlice,
   cart: CartSlice,
   user: userSlice,
-  menuOnOff
+  menuOnOff,
+  sort: sortSlice,
+
  },
  devTools: true,
  
