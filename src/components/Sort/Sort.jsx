@@ -31,7 +31,16 @@ export default function Sort() {
     return (
         <section className={styles.sort_section}>
             <div className={styles.sort_container}>
-                <Box sx={{ width: "100%", bgcolor: "#f5f5f5" }}>
+                <Box
+                    sx={{
+                        display: "flex", // Використовуємо Flexbox
+                        justifyContent: "space-between", // Проміжок між елементами
+                        alignItems: "center", // Вертикальне вирівнювання
+                        width: "100%",
+                        bgcolor: "#f5f5f5",
+                    }}
+                >
+                    {/* Tabs займає 70% */}
                     <Tabs
                         value={value}
                         onChange={handleTabsChange} // Обробник для Tabs
@@ -42,6 +51,10 @@ export default function Sort() {
                             },
                         }}
                         sx={{
+                            flexBasis: "70%", // Задаємо 70% ширини
+                            "& .MuiTabs-scroller": {
+                                maxWidth: "100%", // Ширина Tabs повністю використовується
+                            },
                             "& .MuiTabs-flexContainer": {
                                 justifyContent: "space-around", // Розподіл табів із проміжками
                             },
@@ -52,42 +65,41 @@ export default function Sort() {
                             label="Гамбургери"
                             sx={{ padding: "0" }}
                         />
-                        <Tab
-                            className={styles.sort_title}
-                            label="Кава"
-                            sx={{ padding: "0" }}
-                        />
-                        <Tab
-                            className={styles.sort_title}
-                            label="Напої"
-                            sx={{ padding: "0" }}
-                        />
-
-                        <FormControl sx={{ minWidth: "100px" }}>
-                            <Select
-                                labelId="price-filter"
-                                id="price-filter"
-                                value={price} // Прив'язка до стану Select
-                                onChange={handleSelectChange} // Обробник для Select
-                                sx={{
-                                    "& .MuiOutlinedInput-notchedOutline": {
-                                        border: "none", // Прибирає бордер
-                                    },
-                                    "&:hover .MuiOutlinedInput-notchedOutline": {
-                                        border: "none", // Бордер при ховері
-                                    },
-                                    "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                                        border: "none", // Бордер при фокусі
-                                    },
-                                }}
-                            >
-                                <MenuItem value={1}>Популярні</MenuItem>
-                                <MenuItem value={2}>Від найнижчої</MenuItem>
-                                <MenuItem value={3}>Від найбільшої</MenuItem>
-                            </Select>
-                        </FormControl>
+                        <Tab className={styles.sort_title} label="Кава" sx={{ padding: "0" }} />
+                        <Tab className={styles.sort_title} label="Напої" sx={{ padding: "0" }} />
                     </Tabs>
+
+                    {/* FormControl займає 30% */}
+                    <FormControl
+                        sx={{
+                            flexBasis: "30%", // Задаємо 30% ширини
+                        }}
+                    >
+                        <Select
+                            labelId="price-filter"
+                            id="price-filter"
+                            value={price} // Прив'язка до стану Select
+                            onChange={handleSelectChange} // Обробник для Select
+                            sx={{
+                                "& .MuiOutlinedInput-notchedOutline": {
+                                    border: "none", // Прибирає бордер
+                                },
+                                "&:hover .MuiOutlinedInput-notchedOutline": {
+                                    border: "none", // Бордер при ховері
+                                },
+                                "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                                    border: "none", // Бордер при фокусі
+                                },
+                            }}
+                        >
+                            <MenuItem value={1}>Популярні</MenuItem>
+                            <MenuItem value={2}>Від найнижчої</MenuItem>
+                            <MenuItem value={3}>Від найбільшої</MenuItem>
+                        </Select>
+                    </FormControl>
                 </Box>
+
+
             </div>
         </section>
     );
