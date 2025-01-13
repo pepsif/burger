@@ -1,0 +1,40 @@
+.sort_section {
+  padding: 0 10px;
+  margin: 20px 0;
+}
+
+.sort_container {
+  max-width: 540px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sort_title {
+  font-size: 16px;
+  font-weight: bold;
+  cursor: default;
+}
+
+select {
+  font-size: 16px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -o-appearance: none;
+  text-align: right;
+  width: 30px;
+  color: #aaaaaa;
+  background-color: inherit;
+  font-weight: 500;
+  border: none;
+}
+select:hover {
+  cursor: pointer;
+}
+select:focus {
+  outline: 0;
+}
+select::-ms-expand {
+  display: none;
+}/*# sourceMappingURL=Sort.module.css.map */
